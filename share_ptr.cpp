@@ -1,7 +1,7 @@
 /*
  * share_ptr.cpp
  *
- *  Created on: 2016Äê6ÔÂ2ÈÕ
+ *  Created on: 2016å¹´6æœˆ2æ—¥
  *      Author: John
  */
 #include <iostream>

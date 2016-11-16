@@ -1,7 +1,7 @@
 /*
  * snprintf.cpp
  *
- *  Created on: 2016Äê5ÔÂ21ÈÕ
+ *  Created on: 2016å¹´5æœˆ21æ—¥
  *      Author: John
  */
 
@@ -18,7 +18,7 @@ using namespace std;
 
 int main_snprin()
 {
-	/* strcpy() sprintf() strcat() ´æÔÚ°²È«Òş»¼£¬ Æä¶ÔÓ¦µÄ°²È«°æÎª£º
+	/* strcpy() sprintf() strcat() å­˜åœ¨å®‰å…¨éšæ‚£ï¼Œ å…¶å¯¹åº”çš„å®‰å…¨ç‰ˆä¸ºï¼š
 strncpy() snprintf() strncat() */
 	char* p =new char[100];
 	snprintf(p,40,"sdfasdfasdf3333333333333333333333333333333333333333333333333333333333333333333333333");

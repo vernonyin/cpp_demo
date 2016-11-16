@@ -1,111 +1,111 @@
-//#include <netinet/in.h>    // for sockaddr_in
-//#include <sys/types.h>    // for socket
-//#include <sys/socket.h>    // for socket
-//#include <stdio.h>        // for printf
-//#include <stdlib.h>        // for exit
-//#include <string.h>        // for bzero
-//#include <unistd.h>
-//#include <arpa/inet.h>
-///*
-//#include <sys/types.h>
-//#include <sys/stat.h>
-//#include <fcntl.h>
-//#include <unistd.h>
-//*/
-//
-//#define HELLO_WORLD_SERVER_PORT    6666
-//#define BUFFER_SIZE 1024
-//#define FILE_NAME_MAX_SIZE 512
-//
-//int main(int argc, char **argv)
-//{
-//    if (argc != 2)
-//    {
-//        printf("Usage: ./%s ServerIPAddress\n",argv[0]);
-//        exit(1);
-//    }
-//
-//    //ÉèÖÃÒ»¸ösocketµØÖ·½á¹¹client_addr,´ú±í¿Í»§»úinternetµØÖ·, ¶Ë¿Ú
-//    struct sockaddr_in client_addr;
-//    bzero(&client_addr,sizeof(client_addr)); //°ÑÒ»¶ÎÄÚ´æÇøµÄÄÚÈİÈ«²¿ÉèÖÃÎª0
-//    client_addr.sin_family = AF_INET;    //internetĞ­Òé×å
-//    client_addr.sin_addr.s_addr = htons(INADDR_ANY);//INADDR_ANY±íÊ¾×Ô¶¯»ñÈ¡±¾»úµØÖ·
-//    client_addr.sin_port = htons(0);    //0±íÊ¾ÈÃÏµÍ³×Ô¶¯·ÖÅäÒ»¸ö¿ÕÏĞ¶Ë¿Ú
-//    //´´½¨ÓÃÓÚinternetµÄÁ÷Ğ­Òé(TCP)socket,ÓÃclient_socket´ú±í¿Í»§»úsocket
-//    int client_socket = socket(AF_INET,SOCK_STREAM,0);
-//    if( client_socket < 0)
-//    {
-//        printf("Create Socket Failed!\n");
-//        exit(1);
-//    }
-//    //°Ñ¿Í»§»úµÄsocketºÍ¿Í»§»úµÄsocketµØÖ·½á¹¹ÁªÏµÆğÀ´
-//    if( bind(client_socket,(struct sockaddr*)&client_addr,sizeof(client_addr)))
-//    {
-//        printf("Client Bind Port Failed!\n");
-//        exit(1);
-//    }
-//
-//    //ÉèÖÃÒ»¸ösocketµØÖ·½á¹¹server_addr,´ú±í·şÎñÆ÷µÄinternetµØÖ·, ¶Ë¿Ú
-//    struct sockaddr_in server_addr;
-//    bzero(&server_addr,sizeof(server_addr));
-//    server_addr.sin_family = AF_INET;
-//    if(inet_aton(argv[1],&server_addr.sin_addr) == 0) //·şÎñÆ÷µÄIPµØÖ·À´×Ô³ÌĞòµÄ²ÎÊı
-//    {
-//        printf("Server IP Address Error!\n");
-//        exit(1);
-//    }
-//    server_addr.sin_port = htons(HELLO_WORLD_SERVER_PORT);
-//    socklen_t server_addr_length = sizeof(server_addr);
-//    //Ïò·şÎñÆ÷·¢ÆğÁ¬½Ó,Á¬½Ó³É¹¦ºóclient_socket´ú±íÁË¿Í»§»úºÍ·şÎñÆ÷µÄÒ»¸ösocketÁ¬½Ó
-//    if(connect(client_socket,(struct sockaddr*)&server_addr, server_addr_length) < 0)
-//    {
-//        printf("Can Not Connect To %s!\n",argv[1]);
-//        exit(1);
-//    }
-//
-//    char file_name[FILE_NAME_MAX_SIZE+1];
-//    bzero(file_name, FILE_NAME_MAX_SIZE+1);
-//    printf("Please Input File Name On Server:\t");
-//    scanf("%s", file_name);
-//
-//    char buffer[BUFFER_SIZE];
-//    bzero(buffer,BUFFER_SIZE);
-//    strncpy(buffer, file_name, strlen(file_name)>BUFFER_SIZE?BUFFER_SIZE:strlen(file_name));
-//    //Ïò·şÎñÆ÷·¢ËÍbufferÖĞµÄÊı¾İ
-//    send(client_socket,buffer,BUFFER_SIZE,0);
-//
-////    int fp = open(file_name, O_WRONLY|O_CREAT);
-////    if( fp < 0 )
-//    FILE * fp = fopen(file_name,"w");
-//    if(NULL == fp )
-//    {
-//        printf("File:\t%s Can Not Open To Write\n", file_name);
-//        exit(1);
-//    }
-//
-//    //´Ó·şÎñÆ÷½ÓÊÕÊı¾İµ½bufferÖĞ
-//    bzero(buffer,BUFFER_SIZE);
-//    int length = 0;
-//    while( length = recv(client_socket,buffer,BUFFER_SIZE,0))
-//    {
-//        if(length < 0)
-//        {
-//            printf("Recieve Data From Server %s Failed!\n", argv[1]);
-//            break;
-//        }
-////        int write_length = write(fp, buffer,length);
-//        int write_length = fwrite(buffer,sizeof(char),length,fp);
-//        if (write_length<length)
-//        {
-//            printf("File:\t%s Write Failed\n", file_name);
-//            break;
-//        }
-//        bzero(buffer,BUFFER_SIZE);
-//    }
-//    printf("Recieve File:\t %s From Server[%s] Finished\n",file_name, argv[1]);
-//
-//   // close(fp);
-//    //¹Ø±Õsocket
-//    close(client_socket);
-//    return 0;
-//}
+#include <netinet/in.h>    // for sockaddr_in
+#include <sys/types.h>    // for socket
+#include <sys/socket.h>    // for socket
+#include <stdio.h>        // for printf
+#include <stdlib.h>        // for exit
+#include <string.h>        // for bzero
+#include <unistd.h>
+#include <arpa/inet.h>
+/*
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+*/
+
+#define HELLO_WORLD_SERVER_PORT    6666
+#define BUFFER_SIZE 1024
+#define FILE_NAME_MAX_SIZE 512
+
+int main(int argc, char **argv)
+{
+   if (argc != 2)
+   {
+       printf("Usage: ./%s ServerIPAddress\n",argv[0]);
+       exit(1);
+   }
+
+   //è®¾ç½®ä¸€ä¸ªsocketåœ°å€ç»“æ„client_addr,ä»£è¡¨å®¢æˆ·æœºinternetåœ°å€, ç«¯å£
+   struct sockaddr_in client_addr;
+   bzero(&client_addr,sizeof(client_addr)); //æŠŠä¸€æ®µå†…å­˜åŒºçš„å†…å®¹å…¨éƒ¨è®¾ç½®ä¸º0
+   client_addr.sin_family = AF_INET;    //internetåè®®æ—
+   client_addr.sin_addr.s_addr = htons(INADDR_ANY);//INADDR_ANYè¡¨ç¤ºè‡ªåŠ¨è·å–æœ¬æœºåœ°å€
+   client_addr.sin_port = htons(0);    //0è¡¨ç¤ºè®©ç³»ç»Ÿè‡ªåŠ¨åˆ†é…ä¸€ä¸ªç©ºé—²ç«¯å£
+   //åˆ›å»ºç”¨äºinternetçš„æµåè®®(TCP)socket,ç”¨client_socketä»£è¡¨å®¢æˆ·æœºsocket
+   int client_socket = socket(AF_INET,SOCK_STREAM,0);
+   if( client_socket < 0)
+   {
+       printf("Create Socket Failed!\n");
+       exit(1);
+   }
+   //æŠŠå®¢æˆ·æœºçš„socketå’Œå®¢æˆ·æœºçš„socketåœ°å€ç»“æ„è”ç³»èµ·æ¥
+   if( bind(client_socket,(struct sockaddr*)&client_addr,sizeof(client_addr)))
+   {
+       printf("Client Bind Port Failed!\n");
+       exit(1);
+   }
+
+   //è®¾ç½®ä¸€ä¸ªsocketåœ°å€ç»“æ„server_addr,ä»£è¡¨æœåŠ¡å™¨çš„internetåœ°å€, ç«¯å£
+   struct sockaddr_in server_addr;
+   bzero(&server_addr,sizeof(server_addr));
+   server_addr.sin_family = AF_INET;
+   if(inet_aton(argv[1],&server_addr.sin_addr) == 0) //æœåŠ¡å™¨çš„IPåœ°å€æ¥è‡ªç¨‹åºçš„å‚æ•°
+   {
+       printf("Server IP Address Error!\n");
+       exit(1);
+   }
+   server_addr.sin_port = htons(HELLO_WORLD_SERVER_PORT);
+   socklen_t server_addr_length = sizeof(server_addr);
+   //å‘æœåŠ¡å™¨å‘èµ·è¿æ¥,è¿æ¥æˆåŠŸåclient_socketä»£è¡¨äº†å®¢æˆ·æœºå’ŒæœåŠ¡å™¨çš„ä¸€ä¸ªsocketè¿æ¥
+   if(connect(client_socket,(struct sockaddr*)&server_addr, server_addr_length) < 0)
+   {
+       printf("Can Not Connect To %s!\n",argv[1]);
+       exit(1);
+   }
+
+   char file_name[FILE_NAME_MAX_SIZE+1];
+   bzero(file_name, FILE_NAME_MAX_SIZE+1);
+   printf("Please Input File Name On Server:\t");
+   scanf("%s", file_name);
+
+   char buffer[BUFFER_SIZE];
+   bzero(buffer,BUFFER_SIZE);
+   strncpy(buffer, file_name, strlen(file_name)>BUFFER_SIZE?BUFFER_SIZE:strlen(file_name));
+   //å‘æœåŠ¡å™¨å‘é€bufferä¸­çš„æ•°æ®
+   send(client_socket,buffer,BUFFER_SIZE,0);
+
+//    int fp = open(file_name, O_WRONLY|O_CREAT);
+//    if( fp < 0 )
+   FILE * fp = fopen(file_name,"w");
+   if(NULL == fp )
+   {
+       printf("File:\t%s Can Not Open To Write\n", file_name);
+       exit(1);
+   }
+
+   //ä»æœåŠ¡å™¨æ¥æ”¶æ•°æ®åˆ°bufferä¸­
+   bzero(buffer,BUFFER_SIZE);
+   int length = 0;
+   while( length = recv(client_socket,buffer,BUFFER_SIZE,0))
+   {
+       if(length < 0)
+       {
+           printf("Recieve Data From Server %s Failed!\n", argv[1]);
+           break;
+       }
+//        int write_length = write(fp, buffer,length);
+       int write_length = fwrite(buffer,sizeof(char),length,fp);
+       if (write_length<length)
+       {
+           printf("File:\t%s Write Failed\n", file_name);
+           break;
+       }
+       bzero(buffer,BUFFER_SIZE);
+   }
+   printf("Recieve File:\t %s From Server[%s] Finished\n",file_name, argv[1]);
+
+  // close(fp);
+   //å…³é—­socket
+   close(client_socket);
+   return 0;
+}

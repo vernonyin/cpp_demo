@@ -18,14 +18,14 @@
 
 int main(int argc, char **argv)
 {
-    //ÉèÖÃÒ»¸ösocketµØÖ·½á¹¹server_addr,´ú±í·şÎñÆ÷internetµØÖ·, ¶Ë¿Ú
+    //è®¾ç½®ä¸€ä¸ªsocketåœ°å€ç»“æ„server_addr,ä»£è¡¨æœåŠ¡å™¨internetåœ°å€, ç«¯å£
     struct sockaddr_in server_addr;
-    bzero(&server_addr,sizeof(server_addr)); //°ÑÒ»¶ÎÄÚ´æÇøµÄÄÚÈİÈ«²¿ÉèÖÃÎª0
+    bzero(&server_addr,sizeof(server_addr)); //æŠŠä¸€æ®µå†…å­˜åŒºçš„å†…å®¹å…¨éƒ¨è®¾ç½®ä¸º0
     server_addr.sin_family = AF_INET;
     server_addr.sin_addr.s_addr = htons(INADDR_ANY);
     server_addr.sin_port = htons(HELLO_WORLD_SERVER_PORT);
 
-    //´´½¨ÓÃÓÚinternetµÄÁ÷Ğ­Òé(TCP)socket,ÓÃserver_socket´ú±í·şÎñÆ÷socket
+    //åˆ›å»ºç”¨äºinternetçš„æµåè®®(TCP)socket,ç”¨server_socketä»£è¡¨æœåŠ¡å™¨socket
     int server_socket = socket(PF_INET,SOCK_STREAM,0);
     if( server_socket < 0)
     {
@@ -37,30 +37,30 @@ int main(int argc, char **argv)
    setsockopt(server_socket,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt));
 }
 
-    //°ÑsocketºÍsocketµØÖ·½á¹¹ÁªÏµÆğÀ´
+    //æŠŠsocketå’Œsocketåœ°å€ç»“æ„è”ç³»èµ·æ¥
     if( bind(server_socket,(struct sockaddr*)&server_addr,sizeof(server_addr)))
     {
         printf("Server Bind Port : %d Failed!", HELLO_WORLD_SERVER_PORT);
         exit(1);
     }
 
-    //server_socketÓÃÓÚ¼àÌı
+    //server_socketç”¨äºç›‘å¬
     if ( listen(server_socket, LENGTH_OF_LISTEN_QUEUE) )
     {
         printf("Server Listen Failed!");
         exit(1);
     }
-    while (1) //·şÎñÆ÷¶ËÒªÒ»Ö±ÔËĞĞ
+    while (1) //æœåŠ¡å™¨ç«¯è¦ä¸€ç›´è¿è¡Œ
     {
-        //¶¨Òå¿Í»§¶ËµÄsocketµØÖ·½á¹¹client_addr
+        //å®šä¹‰å®¢æˆ·ç«¯çš„socketåœ°å€ç»“æ„client_addr
         struct sockaddr_in client_addr;
         socklen_t length = sizeof(client_addr);
 
-        //½ÓÊÜÒ»¸öµ½server_socket´ú±íµÄsocketµÄÒ»¸öÁ¬½Ó
-        //Èç¹ûÃ»ÓĞÁ¬½ÓÇëÇó,¾ÍµÈ´ıµ½ÓĞÁ¬½ÓÇëÇó--ÕâÊÇacceptº¯ÊıµÄÌØĞÔ
-        //acceptº¯Êı·µ»ØÒ»¸öĞÂµÄsocket,Õâ¸ösocket(new_server_socket)ÓÃÓÚÍ¬Á¬½Óµ½µÄ¿Í»§µÄÍ¨ĞÅ
-        //new_server_socket´ú±íÁË·şÎñÆ÷ºÍ¿Í»§¶ËÖ®¼äµÄÒ»¸öÍ¨ĞÅÍ¨µÀ
-        //acceptº¯Êı°ÑÁ¬½Óµ½µÄ¿Í»§¶ËĞÅÏ¢ÌîĞ´µ½¿Í»§¶ËµÄsocketµØÖ·½á¹¹client_addrÖĞ
+        //æ¥å—ä¸€ä¸ªåˆ°server_socketä»£è¡¨çš„socketçš„ä¸€ä¸ªè¿æ¥
+        //å¦‚æœæ²¡æœ‰è¿æ¥è¯·æ±‚,å°±ç­‰å¾…åˆ°æœ‰è¿æ¥è¯·æ±‚--è¿™æ˜¯acceptå‡½æ•°çš„ç‰¹æ€§
+        //acceptå‡½æ•°è¿”å›ä¸€ä¸ªæ–°çš„socket,è¿™ä¸ªsocket(new_server_socket)ç”¨äºåŒè¿æ¥åˆ°çš„å®¢æˆ·çš„é€šä¿¡
+        //new_server_socketä»£è¡¨äº†æœåŠ¡å™¨å’Œå®¢æˆ·ç«¯ä¹‹é—´çš„ä¸€ä¸ªé€šä¿¡é€šé“
+        //acceptå‡½æ•°æŠŠè¿æ¥åˆ°çš„å®¢æˆ·ç«¯ä¿¡æ¯å¡«å†™åˆ°å®¢æˆ·ç«¯çš„socketåœ°å€ç»“æ„client_addrä¸­
         int new_server_socket = accept(server_socket,(struct sockaddr*)&client_addr,&length);
         if ( new_server_socket < 0)
         {
@@ -95,7 +95,7 @@ int main(int argc, char **argv)
             while( (file_block_length = fread(buffer,sizeof(char),BUFFER_SIZE,fp))>0)
             {
                 printf("file_block_length = %d\n",file_block_length);
-                //·¢ËÍbufferÖĞµÄ×Ö·û´®µ½new_server_socket,Êµ¼ÊÊÇ¸ø¿Í»§¶Ë
+                //å‘é€bufferä¸­çš„å­—ç¬¦ä¸²åˆ°new_server_socket,å®é™…æ˜¯ç»™å®¢æˆ·ç«¯
                 if(send(new_server_socket,buffer,file_block_length,0)<0)
                 {
                     printf("Send File:\t%s Failed\n", file_name);
@@ -107,10 +107,10 @@ int main(int argc, char **argv)
             fclose(fp);
             printf("File:\t%s Transfer Finished\n",file_name);
         }
-        //¹Ø±ÕÓë¿Í»§¶ËµÄÁ¬½Ó
+        //å…³é—­ä¸å®¢æˆ·ç«¯çš„è¿æ¥
         close(new_server_socket);
     }
-    //¹Ø±Õ¼àÌıÓÃµÄsocket
+    //å…³é—­ç›‘å¬ç”¨çš„socket
     close(server_socket);
     return 0;
 }

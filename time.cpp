@@ -36,7 +36,7 @@ int main() {
 	time(&rawtime1);
 	timeinfo = localtime(&rawtime);
 
-	/*»áÏà»¥Ó°Ïì£¬Ì«¹îÒìÁË todo */
+	/*ä¼šç›¸äº’å½±å“ï¼Œå¤ªè¯¡å¼‚äº† todo */
 	printf("Current local time and date: %s\n", asctime(timeinfo));
 	gtime = gmtime(&rawtime1);
 	printf("Current gtime time and date: %s\n", asctime(gtime));

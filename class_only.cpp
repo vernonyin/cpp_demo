@@ -3,7 +3,7 @@
 /* http://blog.csdn.net/hxz_qlh/article/details/13135433
  *
  * http://kelvinh.github.io/blog/2014/04/19/research-on-operator-new-and-delete/
- * 在类内部new一个对象，这个很厉害啊
+ * 鍦ㄧ被鍐呴儴new涓�涓璞★紝杩欎釜寰堝帀瀹冲晩
  * */
 
 class HeapOnly
@@ -25,8 +25,8 @@ public:
 class StackOnly
 {
 private:
-    void* operator new(size_t t){}     // 注意函数的第一个参数和返回值都是固定的
-    void operator delete(void* ptr){} // 重载了new就需要重载delete
+    void* operator new(size_t t){}     // 娉ㄦ剰鍑芥暟鐨勭涓�涓弬鏁板拰杩斿洖鍊奸兘鏄浐瀹氱殑
+    void operator delete(void* ptr){} // 閲嶈浇浜唍ew灏遍渶瑕侀噸杞絛elete
 public:
     StackOnly(){}
     ~StackOnly(){}

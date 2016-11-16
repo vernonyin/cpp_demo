@@ -1,5 +1,5 @@
 /*
- * ��β���ϴ�Ƴ���
+ * 如何测试洗牌程序
  * http://coolshell.cn/articles/8593.html
  *
  * */
@@ -44,7 +44,7 @@ void ShuffleArray_Fisher_Yates(char* arr, int len)
 
     if ( i == 0 ) return;
     while ( --i ) {
-    	/* Ϊʲô�������㹻����أ�̫������! */
+    	/* 为什么这样就足够随机呢，太神奇了! */
         j = rand() %(i+1);
         temp = arr[i];
         arr[i] = arr[j];
@@ -63,11 +63,11 @@ void ShuffleArray_Fisher_Yates(char* arr, int len)
 7>    0,   9,  40, 125, 467,1050,1376, 910, 588, 435,
 8>    0,   0,   2,  16,  77, 318, 940,1560,1246, 841,
 9>    0,   0,   0,   0,   3,  37, 160, 634,1678,2488,
- �����ڶԽ��ߣ�Ϊʲô����ԭʼ���ݵ�λ���йء�
+ 集中在对角线，为什么？和原始数据的位置有关。
 
   */
 int main_shuffle() {
-	/* ������� */
+	/* 随机种子 */
 	std::srand(time(0));
 
 	char temp[MAXLEN] = { 0 };

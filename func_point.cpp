@@ -6,12 +6,12 @@ int add(int a) {
 }
 void func_point() {
 
-	//ÀàĞÍÇ¿×ª
+	//ç±»å‹å¼ºè½¬
 //  sppdll.spp_handle_init = (spp_handle_init_t)dlsym(handle, "spp_handle_init");
-	int (*pf)(int); //¶¨ÒåÒ»¸öº¯ÊıÖ¸Õë
-	typedef int (Add)(int); //¶¨ÒåÒ»ÖÖÀàĞÍ£¬Ö¸ÕëÒ²¿ÉÒÔ²»ÓÃ
+	int (*pf)(int); //å®šä¹‰ä¸€ä¸ªå‡½æ•°æŒ‡é’ˆ
+	typedef int (Add)(int); //å®šä¹‰ä¸€ç§ç±»å‹ï¼ŒæŒ‡é’ˆä¹Ÿå¯ä»¥ä¸ç”¨
 	Add* handle = &add;
-	pf = &add; //Ö¸Õë³õÊ¼»¯
-	cout << pf(10); //µ÷ÓÃ1
-	cout << handle(10); //µ÷ÓÃ2
+	pf = &add; //æŒ‡é’ˆåˆå§‹åŒ–
+	cout << pf(10); //è°ƒç”¨1
+	cout << handle(10); //è°ƒç”¨2
 }

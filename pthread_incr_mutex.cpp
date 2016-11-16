@@ -5,9 +5,9 @@
 #include <iostream>
 #include <sys/time.h>
 
-/* �߳�ͬ�� */
+/* 线程同步 */
 
-/* !!! volatile�ڴ�ֵ */
+/* !!! volatile内存值 */
 static volatile int glob = 0;
 static pthread_mutex_t mtx;// = PTHREAD_MUTEX_INITIALIZER;
 
@@ -16,7 +16,7 @@ static void * threadFunc(void *arg) {
 	int loc, j, s;
 
 	for (j = 0; j < loops; j++) {
-		/* lockӰ�컹�Ǻܴ�� */
+		/* lock影响还是很大的 */
 		s = pthread_mutex_lock(&mtx);
 		if (s != 0) {
 			printf("pthread_mutex_lock");

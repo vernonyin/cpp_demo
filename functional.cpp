@@ -11,15 +11,15 @@ int f1(int a){
 
 int main_nal(int argc, char *argv[]) {
 
-	/* ¾ÍµÈÍ¬ÓÚº¯ÊıÖ¸Õë */
+	/* å°±ç­‰åŒäºå‡½æ•°æŒ‡é’ˆ */
 	function<int(int)> f_display = f1;
 	cout<<f_display(1)<<endl;
 
-	/* ÔõÃ´Ê¹ÓÃ£¿ */
+	/* æ€ä¹ˆä½¿ç”¨ï¼Ÿ */
 	function<int(int)> f = bind(f1,_1);
 	cout<<f(1)<<endl;
 
-	/* lamba±í´ïÊ½:stlº¯Êı */
+	/* lambaè¡¨è¾¾å¼:stlå‡½æ•° */
 	auto x1 = [](int i){return i;};
 	cout<<x1(1)<<endl;
 	return 0;

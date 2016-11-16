@@ -1,7 +1,7 @@
 /*
  * container.cpp
  *
- *  Created on: 2016Äê5ÔÂ21ÈÕ
+ *  Created on: 2016å¹´5æœˆ21æ—¥
  *      Author: John
  */
 
@@ -15,29 +15,29 @@
 using namespace std;
 
 
-int main11()
+int main()
 {
-	/* ÎŞĞò¼¯ºÏ Q:Ê²Ã´Ê±ºòÊ¹ÓÃÎŞĞòÄØ */
+	/* æ— åºé›†åˆ Q:ä»€ä¹ˆæ—¶å€™ä½¿ç”¨æ— åºå‘¢ */
 	unordered_map<int,string> map1={{1,"a"}};
 	map<int,string> map2={{1,"a"}};
 
-	/* ÔªËØ²éÕÒ
-	 * ¶ÔÓÚ²»ÖØ¸´µÄÈİÆ÷count¶¼Ò»Ñù£¬ÖØ¸´µÄ»°count»á×ö¸ü¶à*/
+	/* å…ƒç´ æŸ¥æ‰¾
+	 * å¯¹äºä¸é‡å¤çš„å®¹å™¨countéƒ½ä¸€æ ·ï¼Œé‡å¤çš„è¯countä¼šåšæ›´å¤š*/
 	map1.count(2);
 	if (map1.find(2) == map1.end()){
 		printf("no find 2\n");
 	}
 
-	/* setÀàĞÍ */
+	/* setç±»å‹ */
 	set<int> set1={1,4,6,4,3,2};
 
-	/* mapµü´úÆ÷¾ÍÊÇ pairÀàĞÍ Ò²ĞĞµÄ */
+	/* mapè¿­ä»£å™¨å°±æ˜¯ pairç±»å‹ ä¹Ÿè¡Œçš„ */
 	pair<int,string> pair1={2,"b"};
 	map1.insert({2,"b"});
 
 
 	//auto beg=map1.lower_bound(1);
-	/* ²»´æÔÚÊ±²åÈë c++11 */
+	/* ä¸å­˜åœ¨æ—¶æ’å…¥ c++11 */
 //	if(map2.emplace(pair1)){
 //
 //	}

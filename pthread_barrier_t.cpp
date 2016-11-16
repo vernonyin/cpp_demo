@@ -1,7 +1,7 @@
 /*
  * pthread_barrier_t.cpp
- * Ò»ÖÖÍ¬²½ËøµÄ·½Ê½£¬µÈ´ıËùÓĞÏß³Ì¶¼okÁËÈ»ºóÔÙÍ¬²½Ö´ĞĞ
- *  Created on: 2016Äê5ÔÂ22ÈÕ
+ * ä¸€ç§åŒæ­¥é”çš„æ–¹å¼ï¼Œç­‰å¾…æ‰€æœ‰çº¿ç¨‹éƒ½okäº†ç„¶åå†åŒæ­¥æ‰§è¡Œ
+ *  Created on: 2016å¹´5æœˆ22æ—¥
  *      Author: John
  */
 
@@ -16,7 +16,7 @@ void* task(void* param) {
     pthread_barrier_wait(&b);
     printf("after the barrier %d\n", id);
 }
-/* barrier ÆÁÕÏ */
+/* barrier å±éšœ */
 int main_barrier() {
     int nThread = 5;
     int i;

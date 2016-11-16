@@ -1,7 +1,7 @@
 /*
  * util.cpp
  *
- *  Created on: 2016Äê5ÔÂ22ÈÕ
+ *  Created on: 2016å¹´5æœˆ22æ—¥
  *      Author: John
  */
 #include "util.h"

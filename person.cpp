@@ -17,13 +17,13 @@ struct String
        void as2();
        void as3();
 };
-//int main()
-//{
-//	struct String a;
-////	memset(&a,0,sizeof(a));
-//	double ab =(double) 1/3;
-////
-//    cout <<"---<"<<ab<<">----" << endl;
+int main()
+{
+	struct String a;
+//	memset(&a,0,sizeof(a));
+	double ab =(double) 1/3;
 //
-//    cout << endl;
-//}
+   cout <<"---<"<<ab<<">----" << endl;
+
+   cout << endl;
+}

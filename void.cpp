@@ -25,15 +25,15 @@ void void_test(void* pv) {
 
 
 /*
- * ָ��һ�㲻��ȡ����
- *     �ڶ������ÿ��Ըı���ָ���ַ�����ݣ����ǲ��ܸı��������ĵ�ַ��Ҳ����˵�����ĵ�ַ�ǲ��ᱻ�ı�ģ����Ǳ�����ֵ��䣩
- *     �ַ������� strcpy(s, "Good News!");
+ * 指针一般不用取引用
+ *     第二：引用可以改变其指向地址的数据，但是不能改变其自身的地址（也就是说别名的地址是不会被改变的，但是别名的值会变）
+ *     字符串复制 strcpy(s, "Good News!");
  *     http://stackoverflow.com/questions/2898364/strcpy-vs-memcpy
  * */
 
 int main_void(int argc, char *argv[]) {
 	char *buf = new char[1];
-	strcpy(buf, "Good News!"); /* �����鸳�ַ��� ����\0��ֹͣ */
+	strcpy(buf, "Good News!"); /* 给数组赋字符串 遇到\0就停止 */
 	void_test(buf);
 	return 0;
 }

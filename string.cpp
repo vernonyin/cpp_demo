@@ -1,7 +1,7 @@
 /*
  * string.cpp
  *
- *  Created on: 2016Äê6ÔÂ4ÈÕ
+ *  Created on: 2016å¹´6æœˆ4æ—¥
  *      Author: John
  */
 
@@ -33,7 +33,7 @@ char *strncpy1(char *s1, const char *s2, size_t n) {
 int main_string(int argc, char *argv[]) {
 
 	int iNum = 444;
-	/* ×Ö·û´®×ª»»
+	/* å­—ç¬¦ä¸²è½¬æ¢
 	 * http://en.cppreference.com/w/cpp/string/basic_string/to_string
 	 *
 	string str = std::to_string(iNum);
@@ -42,10 +42,10 @@ int main_string(int argc, char *argv[]) {
 	cout<<"float:"<<f<<endl; */
 
 	char *buf = new char[1];
-	strcpy(buf, "Good News!"); /* ¸øÊı×é¸³×Ö·û´® Óöµ½\0¾ÍÍ£Ö¹ */
-	memcpy(buf, "Good News!", 9); /* ¸øÊı×é¸³×Ö·û´® Óöµ½\0¾Í²»»áÍ£Ö¹ */
+	strcpy(buf, "Good News!"); /* ç»™æ•°ç»„èµ‹å­—ç¬¦ä¸² é‡åˆ°\0å°±åœæ­¢ */
+	memcpy(buf, "Good News!", 9); /* ç»™æ•°ç»„èµ‹å­—ç¬¦ä¸² é‡åˆ°\0å°±ä¸ä¼šåœæ­¢ */
 	*(buf + 1) = 't';
-	/* ´òÓ¡µ¥¸ö×Ö·û */
+	/* æ‰“å°å•ä¸ªå­—ç¬¦ */
 	printf("%c\n", *(buf + 2));
 
 	char str1[] = "To be or not to be";
@@ -59,8 +59,8 @@ int main_string(int argc, char *argv[]) {
 	char* p="how are you ?";
 	char name[20]="ABCDEFGHIJKLMNOPQRS";
 
-	strcpy(name,p);   //name¸Ä±äÎª"how are you ? OPQRS "     ====>´íÎó£¡
-	strncpy(name,p,sizeof(name));    //name¸Ä±äÎª"how are you ?      "       ====>ÕıÈ·£¡
+	strcpy(name,p);   //nameæ”¹å˜ä¸º"how are you ? OPQRS "     ====>é”™è¯¯ï¼
+	strncpy(name,p,sizeof(name));    //nameæ”¹å˜ä¸º"how are you ?      "       ====>æ­£ç¡®ï¼
 	puts(p);
 	puts(name);
 	return 0;

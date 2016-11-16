@@ -1,7 +1,7 @@
 /*
  * preprocessing.cpp
- * Ô¤´¦ÀíÃüÁî
- *  Created on: 2016Äê5ÔÂ21ÈÕ
+ * é¢„å¤„ç†å‘½ä»¤
+ *  Created on: 2016å¹´5æœˆ21æ—¥
  *      Author: John
  */
 
@@ -21,13 +21,13 @@ int sum5(int a){
 };
 
 int main_pre() {
-	/* Ô¤¶¨Òå·ûºÅ */
+	/* é¢„å®šä¹‰ç¬¦å· */
 	cout << "FILE:" << __FILE__ << endl;
 	cout << "LINE:" << __LINE__ << endl;
 	cout << "DATE:" << __DATE__ << endl;
 	cout << "TIME:" << __TIME__ << endl;
 
-	/* define do while(0) ÃîÓÃ*/
+	/* define do while(0) å¦™ç”¨*/
 	#define DELETE_POINTER(p)       \
 		do                          \
 		{                           \
@@ -38,11 +38,11 @@ int main_pre() {
 
 	char* p;
 	DELETE_POINTER(p);
-	/* ÒÆ³ıÒ»¸ödefine */
+	/* ç§»é™¤ä¸€ä¸ªdefine */
 	#undef DELETE_POINTER
 	char c='4';
 	int b=c;
-	/* Ìõ¼ş±àÒë ³£Á¿±í´ïÊ½ */
+	/* æ¡ä»¶ç¼–è¯‘ å¸¸é‡è¡¨è¾¾å¼ */
 	#if b!=2
 		int a=1;
 	#else
@@ -50,19 +50,19 @@ int main_pre() {
 	#endif
 	cout<<"a="<<a<<endl;
 
-	/* ÊÇ·ñ¶¨Òå */
+	/* æ˜¯å¦å®šä¹‰ */
 	#ifndef DELETE_POINTER
 	#define DELETE_POINTER 1
 		//...
 	cout<<"delete_pointer:"<<endl;
 	#endif
 
-	/* #a ÊµÏÖÊä³ö±äÁ¿Ãû£¡£¡£¡ cool
-	 * define Ä©Î²¶¼²»¼Ó;µ÷ÓÃµÄµØ·½¼Ó*/
+	/* #a å®ç°è¾“å‡ºå˜é‡åï¼ï¼ï¼ cool
+	 * define æœ«å°¾éƒ½ä¸åŠ ;è°ƒç”¨çš„åœ°æ–¹åŠ */
 	#define PRINT(a) printf("the "#a" value\n")
 	PRINT(ABC);
 
-	/* ÊµÏÖ±äÁ¿ÃûºÍº¯ÊıÃûµÄÆ´½ÓµÄÆ´½Ó£¡£¡£¡cool */
+	/* å®ç°å˜é‡åå’Œå‡½æ•°åçš„æ‹¼æ¥çš„æ‹¼æ¥ï¼ï¼ï¼cool */
 	#define ADD_TO_SUM(sum_number,value) \
 		sum##sum_number += value
 

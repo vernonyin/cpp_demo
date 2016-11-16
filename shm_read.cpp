@@ -1,72 +1,72 @@
-//#include <unistd.h>
-//#include <stdlib.h>
-//#include <stdio.h>
-//#include <string.h>
-//#include <errno.h>
-//#include <sys/shm.h>
-//
-//#define TEXT_SZ 20480
-//
-//struct shared_use_st
-//{
-//	int written;//×÷ÎªÒ»¸ö±êÖ¾£¬·Ç0£º±íÊ¾¿É¶Á£¬0±íÊ¾¿ÉĞ´
-//	char text[TEXT_SZ];//¼ÇÂ¼Ğ´ÈëºÍ¶ÁÈ¡µÄÎÄ±¾
-//};
-//
-//
-//int main_sh()
-//{
-//	int running = 1;//³ÌĞòÊÇ·ñ¼ÌĞøÔËĞĞµÄ±êÖ¾
-//	void *shm = NULL;//·ÖÅäµÄ¹²ÏíÄÚ´æµÄÔ­Ê¼Ê×µØÖ·
-//	struct shared_use_st *shared;//Ö¸Ïòshm
-//	int shmid;//¹²ÏíÄÚ´æ±êÊ¶·û
-//	//´´½¨¹²ÏíÄÚ´æ
-//	shmid = shmget((key_t)1234, sizeof(struct shared_use_st), 0666|IPC_CREAT);
-//	if(shmid == -1)
-//	{
-//		fprintf(stderr, "shmget failed %d\n",errno);
-//		exit(EXIT_FAILURE);
-//	}
-//	//½«¹²ÏíÄÚ´æÁ¬½Óµ½µ±Ç°½ø³ÌµÄµØÖ·¿Õ¼ä
-//	shm = shmat(shmid, 0, 0);
-//	if(shm == (void*)-1)
-//	{
-//		fprintf(stderr, "shmat failed\n");
-//		exit(EXIT_FAILURE);
-//	}
-//	printf("\nMemory attached at %ld\n", (long)shm);
-//	//ÉèÖÃ¹²ÏíÄÚ´æ
-//	shared = (struct shared_use_st*)shm;
-//	shared->written = 0;
-//	while(running)//¶ÁÈ¡¹²ÏíÄÚ´æÖĞµÄÊı¾İ
-//	{
-//		//Ã»ÓĞ½ø³ÌÏò¹²ÏíÄÚ´æ¶¨Êı¾İÓĞÊı¾İ¿É¶ÁÈ¡
-//		if(shared->written != 0)
-//		{
-//			printf("You wrote: %s", shared->text);
-//			usleep(rand() % 3);
-//			//¶ÁÈ¡ÍêÊı¾İ£¬ÉèÖÃwrittenÊ¹¹²ÏíÄÚ´æ¶Î¿ÉĞ´
-//			shared->written = 0;
-//			//ÊäÈëÁËend£¬ÍË³öÑ­»·£¨³ÌĞò£©
-//			if(strncmp(shared->text, "end", 3) == 0)
-//				running = 0;
-//		}
-//		else//ÓĞÆäËû½ø³ÌÔÚĞ´Êı¾İ£¬²»ÄÜ¶ÁÈ¡Êı¾İ
-//			usleep(1);
-//	}
-//	//°Ñ¹²ÏíÄÚ´æ´Óµ±Ç°½ø³ÌÖĞ·ÖÀë
-//	if(shmdt(shm) == -1)
-//	{
-//		fprintf(stderr, "shmdt failed\n");
-//		exit(EXIT_FAILURE);
-//	}
-//	//É¾³ı¹²ÏíÄÚ´æ
-//	if(shmctl(shmid, IPC_RMID, 0) == -1)
-//	{
-//		fprintf(stderr, "shmctl(IPC_RMID) failed\n");
-//		exit(EXIT_FAILURE);
-//	}
-//	exit(EXIT_SUCCESS);
-//}
-//
-//
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+#include <sys/shm.h>
+
+#define TEXT_SZ 20480
+
+struct shared_use_st
+{
+	int written;//ä½œä¸ºä¸€ä¸ªæ ‡å¿—ï¼Œé0ï¼šè¡¨ç¤ºå¯è¯»ï¼Œ0è¡¨ç¤ºå¯å†™
+	char text[TEXT_SZ];//è®°å½•å†™å…¥å’Œè¯»å–çš„æ–‡æœ¬
+};
+
+
+int main_sh()
+{
+	int running = 1;//ç¨‹åºæ˜¯å¦ç»§ç»­è¿è¡Œçš„æ ‡å¿—
+	void *shm = NULL;//åˆ†é…çš„å…±äº«å†…å­˜çš„åŸå§‹é¦–åœ°å€
+	struct shared_use_st *shared;//æŒ‡å‘shm
+	int shmid;//å…±äº«å†…å­˜æ ‡è¯†ç¬¦
+	//åˆ›å»ºå…±äº«å†…å­˜
+	shmid = shmget((key_t)1234, sizeof(struct shared_use_st), 0666|IPC_CREAT);
+	if(shmid == -1)
+	{
+		fprintf(stderr, "shmget failed %d\n",errno);
+		exit(EXIT_FAILURE);
+	}
+	//å°†å…±äº«å†…å­˜è¿æ¥åˆ°å½“å‰è¿›ç¨‹çš„åœ°å€ç©ºé—´
+	shm = shmat(shmid, 0, 0);
+	if(shm == (void*)-1)
+	{
+		fprintf(stderr, "shmat failed\n");
+		exit(EXIT_FAILURE);
+	}
+	printf("\nMemory attached at %ld\n", (long)shm);
+	//è®¾ç½®å…±äº«å†…å­˜
+	shared = (struct shared_use_st*)shm;
+	shared->written = 0;
+	while(running)//è¯»å–å…±äº«å†…å­˜ä¸­çš„æ•°æ®
+	{
+		//æ²¡æœ‰è¿›ç¨‹å‘å…±äº«å†…å­˜å®šæ•°æ®æœ‰æ•°æ®å¯è¯»å–
+		if(shared->written != 0)
+		{
+			printf("You wrote: %s", shared->text);
+			usleep(rand() % 3);
+			//è¯»å–å®Œæ•°æ®ï¼Œè®¾ç½®writtenä½¿å…±äº«å†…å­˜æ®µå¯å†™
+			shared->written = 0;
+			//è¾“å…¥äº†endï¼Œé€€å‡ºå¾ªç¯ï¼ˆç¨‹åºï¼‰
+			if(strncmp(shared->text, "end", 3) == 0)
+				running = 0;
+		}
+		else//æœ‰å…¶ä»–è¿›ç¨‹åœ¨å†™æ•°æ®ï¼Œä¸èƒ½è¯»å–æ•°æ®
+			usleep(1);
+	}
+	//æŠŠå…±äº«å†…å­˜ä»å½“å‰è¿›ç¨‹ä¸­åˆ†ç¦»
+	if(shmdt(shm) == -1)
+	{
+		fprintf(stderr, "shmdt failed\n");
+		exit(EXIT_FAILURE);
+	}
+	//åˆ é™¤å…±äº«å†…å­˜
+	if(shmctl(shmid, IPC_RMID, 0) == -1)
+	{
+		fprintf(stderr, "shmctl(IPC_RMID) failed\n");
+		exit(EXIT_FAILURE);
+	}
+	exit(EXIT_SUCCESS);
+}
+
+

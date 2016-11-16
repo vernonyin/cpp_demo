@@ -15,7 +15,7 @@ struct st {
 	string s;
 };
 int main_test3() {
-	/* sizeofÊÇÖ¸Õë´óĞ¡  */
+	/* sizeofæ˜¯æŒ‡é’ˆå¤§å°  */
 	cout << "size=" << sizeof(struct st) << endl;
 	cout << "size=" << sizeof(string) << endl;
 	int a=10;

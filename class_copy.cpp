@@ -28,14 +28,14 @@ private:
 
 int main_test() {
 	cout << "ct1: ";
-	ClassTest ct1("ab"); //Ö±½Ó³õÊ¼»¯
+	ClassTest ct1("ab"); //ç›´æ¥åˆå§‹åŒ–
 	cout << "ct2: ";
-	ClassTest ct2 = "ab"; //¸´ÖÆ³õÊ¼»¯
+	ClassTest ct2 = "ab"; //å¤åˆ¶åˆå§‹åŒ–
 	cout << "ct3: ";
-	ClassTest ct3 = ct1; //¸´ÖÆ³õÊ¼»¯
+	ClassTest ct3 = ct1; //å¤åˆ¶åˆå§‹åŒ–
 	cout << "ct4: ";
-	ClassTest ct4(ct1); //Ö±½Ó³õÊ¼»¯
+	ClassTest ct4(ct1); //ç›´æ¥åˆå§‹åŒ–
 	cout << "ct5: ";
-	ClassTest ct5 = ClassTest(); //¸´ÖÆ³õÊ¼»¯
+	ClassTest ct5 = ClassTest(); //å¤åˆ¶åˆå§‹åŒ–
 	return 0;
 }

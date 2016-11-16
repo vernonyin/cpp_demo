@@ -1,7 +1,7 @@
 /*
  * pthread.cpp
  *
- *  Created on: 2016Äê5ÔÂ22ÈÕ
+ *  Created on: 2016å¹´5æœˆ22æ—¥
  *      Author: John
  */
 
@@ -30,8 +30,8 @@ static void * threadFunc(void *arg) {
 	return (void *) strlen(s);
 }
 /*
- * 1¡¢pthread_t½á¹¹ÀïÃæÓĞÊ²Ã´£¬ºÍfdÄÇÑùÓÃÂğ£¿linuxÏÂ¾ÍÊÇÒ»¸ö typedef unsigned long int pthread_t;
- * 2¡¢º¯ÊıÖ¸Õë£¿Ö»ÄÜ¹Ì¶¨·µ»ØÖµºÍ¹Ì¶¨Ò»¸ö²ÎÊıÂğ£¿ÊÇµÄ£¬Ö»ÄÜÍ¨¹ı½á¹¹Ìå»òÕßÆäËû·½Ê½ http://blog.csdn.net/easecom/article/details/4508292
+ * 1ã€pthread_tç»“æ„é‡Œé¢æœ‰ä»€ä¹ˆï¼Œå’Œfdé‚£æ ·ç”¨å—ï¼Ÿlinuxä¸‹å°±æ˜¯ä¸€ä¸ª typedef unsigned long int pthread_t;
+ * 2ã€å‡½æ•°æŒ‡é’ˆï¼Ÿåªèƒ½å›ºå®šè¿”å›å€¼å’Œå›ºå®šä¸€ä¸ªå‚æ•°å—ï¼Ÿæ˜¯çš„ï¼Œåªèƒ½é€šè¿‡ç»“æ„ä½“æˆ–è€…å…¶ä»–æ–¹å¼ http://blog.csdn.net/easecom/article/details/4508292
  *
  *
  * */
@@ -41,7 +41,7 @@ int main_pth(int argc, char *argv[]) {
 	int s;
 
 	char mes[] = "Hello world\n";
-	/*´´½¨Ïß³Ì
+	/*åˆ›å»ºçº¿ç¨‹
 	 *
 	   int pthread_create(pthread_t *thread,
 	   	    const pthread_attr_t *attr,
@@ -57,7 +57,7 @@ int main_pth(int argc, char *argv[]) {
 	printf("Thread returned %ld %ld\n", t1,pthread_self());
 
 	/*
-	 * µÈ´ıÏß³ÌÖ´ĞĞÍê ·µ»ØÖµÒ²ÊÇvoid*
+	 * ç­‰å¾…çº¿ç¨‹æ‰§è¡Œå®Œ è¿”å›å€¼ä¹Ÿæ˜¯void*
 	*/
 	s = pthread_join(t1, &res);
 	if (s != 0){

@@ -31,7 +31,7 @@ private:
 
 };
 
-/* ��̬��Ա��ʼ������Ȼ��Ҫ�������� */
+/* 静态成员初始化，居然还要加上类型 */
 int A::cnt = 0;
 
 A get(){
@@ -41,10 +41,10 @@ A get(){
 }
 
 int main_deep(){
-	/*todo ���ﻹ��û�и㶮����������ֵ�Ƿ�Ҫ���¸�ֵ�Ǻ͵��÷�ʽ�йأ�����˵�Ż������Ż��ˡ� */
+	/*todo 这里还是没有搞懂，函数返回值是否要重新赋值是和调用方式有关？还是说优化器给优化了。 */
 	A a=get();
-	A b=a; // �ȼ���  === b(a)
-	/*todo ��������͹��캯��������3�Σ�������������ֻ������2�� */
+	A b=a; // 等价于  === b(a)
+	/*todo 如果这样就构造函数调用了3次，但是析构函数只调用了2次 */
 	b = a;
 
 //
@@ -52,11 +52,11 @@ int main_deep(){
 //	get();
 //	a.print();
 //	A item;
-//	/* ����copy���캯�� */
+//	/* 调用copy构造函数 */
 //	decltype(item) itemB ;
-//	itemB = item;/* ��ֵ���캯�� */
+//	itemB = item;/* 赋值构造函数 */
 //
-//	/* �������캯�� */
+//	/* 拷贝构造函数 */
 //	auto itemC = item;
 //	auto itemD(item);
 

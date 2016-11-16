@@ -14,28 +14,28 @@ using namespace std;
 
 extern "C" int func();
 
-int AdjustArray(int s[], int l, int r) //·µ»Øµ÷Õûºó»ù×¼ÊıµÄÎ»ÖÃ
+int AdjustArray(int s[], int l, int r) //è¿”å›è°ƒæ•´ååŸºå‡†æ•°çš„ä½ç½®
 		{
 	int i = l, j = r;
-	int x = s[l]; //s[l]¼´s[i]¾ÍÊÇµÚÒ»¸ö¿Ó
+	int x = s[l]; //s[l]å³s[i]å°±æ˜¯ç¬¬ä¸€ä¸ªå‘
 	while (i < j) {
-		// ´ÓÓÒÏò×óÕÒĞ¡ÓÚxµÄÊıÀ´Ìîs[i]
+		// ä»å³å‘å·¦æ‰¾å°äºxçš„æ•°æ¥å¡«s[i]
 		while (i < j && s[j] >= x)
 			j--;
 		if (i < j) {
-			s[i] = s[j]; //½«s[j]Ìîµ½s[i]ÖĞ£¬s[j]¾ÍĞÎ³ÉÁËÒ»¸öĞÂµÄ¿Ó
+			s[i] = s[j]; //å°†s[j]å¡«åˆ°s[i]ä¸­ï¼Œs[j]å°±å½¢æˆäº†ä¸€ä¸ªæ–°çš„å‘
 			i++;
 		}
 
-		// ´Ó×óÏòÓÒÕÒ´óÓÚ»òµÈÓÚxµÄÊıÀ´Ìîs[j]
+		// ä»å·¦å‘å³æ‰¾å¤§äºæˆ–ç­‰äºxçš„æ•°æ¥å¡«s[j]
 		while (i < j && s[i] < x)
 			i++;
 		if (i < j) {
-			s[j] = s[i]; //½«s[i]Ìîµ½s[j]ÖĞ£¬s[i]¾ÍĞÎ³ÉÁËÒ»¸öĞÂµÄ¿Ó
+			s[j] = s[i]; //å°†s[i]å¡«åˆ°s[j]ä¸­ï¼Œs[i]å°±å½¢æˆäº†ä¸€ä¸ªæ–°çš„å‘
 			j--;
 		}
 	}
-	//ÍË³öÊ±£¬iµÈÓÚj¡£½«xÌîµ½Õâ¸ö¿ÓÖĞ¡£
+	//é€€å‡ºæ—¶ï¼Œiç­‰äºjã€‚å°†xå¡«åˆ°è¿™ä¸ªå‘ä¸­ã€‚
 	s[i] = x;
 
 	return i;
@@ -43,30 +43,30 @@ int AdjustArray(int s[], int l, int r) //·µ»Øµ÷Õûºó»ù×¼ÊıµÄÎ»ÖÃ
 
 void quick_sort1(int s[], int l, int r) {
 	if (l < r) {
-		int i = AdjustArray(s, l, r); //ÏÈ³ÉÍÚ¿ÓÌîÊı·¨µ÷Õûs[]
-		quick_sort1(s, l, i - 1); // µİ¹éµ÷ÓÃ
+		int i = AdjustArray(s, l, r); //å…ˆæˆæŒ–å‘å¡«æ•°æ³•è°ƒæ•´s[]
+		quick_sort1(s, l, i - 1); // é€’å½’è°ƒç”¨
 		quick_sort1(s, i + 1, r);
 	}
 }
 
-//¿ìËÙÅÅĞò
+//å¿«é€Ÿæ’åº
 void quick_sort(int s[], int l, int r) {
 	if (l < r) {
-		//Swap(s[l], s[(l + r) / 2]); //½«ÖĞ¼äµÄÕâ¸öÊıºÍµÚÒ»¸öÊı½»»» ²Î¼û×¢1
+		//Swap(s[l], s[(l + r) / 2]); //å°†ä¸­é—´çš„è¿™ä¸ªæ•°å’Œç¬¬ä¸€ä¸ªæ•°äº¤æ¢ å‚è§æ³¨1
 		int i = l, j = r, x = s[l];
 		while (i < j) {
-			while (i < j && s[j] >= x) // ´ÓÓÒÏò×óÕÒµÚÒ»¸öĞ¡ÓÚxµÄÊı
+			while (i < j && s[j] >= x) // ä»å³å‘å·¦æ‰¾ç¬¬ä¸€ä¸ªå°äºxçš„æ•°
 				j--;
 			if (i < j)
 				s[i++] = s[j];
 
-			while (i < j && s[i] < x) // ´Ó×óÏòÓÒÕÒµÚÒ»¸ö´óÓÚµÈÓÚxµÄÊı
+			while (i < j && s[i] < x) // ä»å·¦å‘å³æ‰¾ç¬¬ä¸€ä¸ªå¤§äºç­‰äºxçš„æ•°
 				i++;
 			if (i < j)
 				s[j--] = s[i];
 		}
 		s[i] = x;
-		quick_sort(s, l, i - 1); // µİ¹éµ÷ÓÃ
+		quick_sort(s, l, i - 1); // é€’å½’è°ƒç”¨
 		quick_sort(s, i + 1, r);
 	}
 }
@@ -75,7 +75,7 @@ void QuickSort(int data[], int lo, int hi) {
 	int pivot, l, r, temp;
 	l = lo;
 	r = hi;
-	pivot = data[(lo + hi) / 2]; //È¡ÖĞÎ»Öµ×÷Îª·Ö½çÖµ
+	pivot = data[(lo + hi) / 2]; //å–ä¸­ä½å€¼ä½œä¸ºåˆ†ç•Œå€¼
 	while (l < r) {
 		while (data[l] < pivot)
 			++l;
