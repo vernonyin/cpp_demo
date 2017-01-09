@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/alidata/cpp_demo/include/list.h
+stdbool.h
+-
+
+/alidata/cpp_demo/kernel_link.c
+stdio.h
+-
+stdlib.h
+-
+stddef.h
+-
+include/list.h
+/alidata/cpp_demo/include/list.h
+
