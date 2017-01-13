@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-kernel_link.o: kernel_link.c.o
+atomic_inc.o: atomic_inc.cpp.o
 
-.PHONY : kernel_link.o
+.PHONY : atomic_inc.o
 
 # target to build an object file
-kernel_link.c.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kernel_link.c.o
-.PHONY : kernel_link.c.o
+atomic_inc.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.o
+.PHONY : atomic_inc.cpp.o
 
-kernel_link.i: kernel_link.c.i
+atomic_inc.i: atomic_inc.cpp.i
 
-.PHONY : kernel_link.i
+.PHONY : atomic_inc.i
 
 # target to preprocess a source file
-kernel_link.c.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kernel_link.c.i
-.PHONY : kernel_link.c.i
+atomic_inc.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.i
+.PHONY : atomic_inc.cpp.i
 
-kernel_link.s: kernel_link.c.s
+atomic_inc.s: atomic_inc.cpp.s
 
-.PHONY : kernel_link.s
+.PHONY : atomic_inc.s
 
 # target to generate assembly for a file
-kernel_link.c.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kernel_link.c.s
-.PHONY : kernel_link.c.s
+atomic_inc.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.s
+.PHONY : atomic_inc.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hello"
-	@echo "... kernel_link.o"
-	@echo "... kernel_link.i"
-	@echo "... kernel_link.s"
+	@echo "... atomic_inc.o"
+	@echo "... atomic_inc.i"
+	@echo "... atomic_inc.s"
 .PHONY : help
 
 

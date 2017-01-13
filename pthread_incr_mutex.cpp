@@ -36,7 +36,7 @@ static void * threadFunc(void *arg) {
 	return NULL;
 }
 
-int main_pth2(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 	pthread_t t1, t2;
 	int loops, s;
 
