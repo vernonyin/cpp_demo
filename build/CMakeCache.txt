@@ -166,7 +166,7 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-file:UNINITIALIZED=atomic_inc.cpp
+file:UNINITIALIZED=kfifo.c
 
 //Value Computed by CMake
 test_BINARY_DIR:STATIC=/alidata/cpp_demo/build

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/alidata/cpp_demo/include/my_list.h
+/alidata/cpp_demo/include/kfifo.h
 
-/alidata/cpp_demo/my_link.c
+/alidata/cpp_demo/kfifo.c
 stdio.h
 -
 stdlib.h
 -
-include/my_list.h
-/alidata/cpp_demo/include/my_list.h
+include/kfifo.h
+/alidata/cpp_demo/include/kfifo.h
 

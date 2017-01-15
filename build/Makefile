@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-atomic_inc.o: atomic_inc.cpp.o
+kfifo.o: kfifo.c.o
 
-.PHONY : atomic_inc.o
+.PHONY : kfifo.o
 
 # target to build an object file
-atomic_inc.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.o
-.PHONY : atomic_inc.cpp.o
+kfifo.c.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kfifo.c.o
+.PHONY : kfifo.c.o
 
-atomic_inc.i: atomic_inc.cpp.i
+kfifo.i: kfifo.c.i
 
-.PHONY : atomic_inc.i
+.PHONY : kfifo.i
 
 # target to preprocess a source file
-atomic_inc.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.i
-.PHONY : atomic_inc.cpp.i
+kfifo.c.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kfifo.c.i
+.PHONY : kfifo.c.i
 
-atomic_inc.s: atomic_inc.cpp.s
+kfifo.s: kfifo.c.s
 
-.PHONY : atomic_inc.s
+.PHONY : kfifo.s
 
 # target to generate assembly for a file
-atomic_inc.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.s
-.PHONY : atomic_inc.cpp.s
+kfifo.c.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/kfifo.c.s
+.PHONY : kfifo.c.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hello"
-	@echo "... atomic_inc.o"
-	@echo "... atomic_inc.i"
-	@echo "... atomic_inc.s"
+	@echo "... kfifo.o"
+	@echo "... kfifo.i"
+	@echo "... kfifo.s"
 .PHONY : help
 
 
