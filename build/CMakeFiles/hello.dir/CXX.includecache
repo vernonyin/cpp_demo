@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/alidata/cpp_demo/atomic_inc.cpp
+thread
+-
+atomic
+-
+unistd.h
+-
+stdio.h
+-
+list
+-
+vector
+-
+sys/time.h
+-
+
