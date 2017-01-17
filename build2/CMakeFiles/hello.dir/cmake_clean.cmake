@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hello.dir/atomic_inc.cpp.o"
+  "CMakeFiles/hello.dir/my_link.c.o"
   "hello.pdb"
   "hello"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C)
   include(CMakeFiles/hello.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

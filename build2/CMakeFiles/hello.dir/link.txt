@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/hello.dir/my_link.c.o  -o hello -rdynamic -lpthread 

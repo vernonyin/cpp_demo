@@ -54,7 +54,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /alidata/cpp_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /alidata/cpp_demo/build
+CMAKE_BINARY_DIR = /alidata/cpp_demo/build2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /alidata/cpp_demo/build/CMakeFiles /alidata/cpp_demo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /alidata/cpp_demo/build2/CMakeFiles /alidata/cpp_demo/build2/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /alidata/cpp_demo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /alidata/cpp_demo/build2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-atomic_inc.o: atomic_inc.cpp.o
+my_link.o: my_link.c.o
 
-.PHONY : atomic_inc.o
+.PHONY : my_link.o
 
 # target to build an object file
-atomic_inc.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.o
-.PHONY : atomic_inc.cpp.o
+my_link.c.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/my_link.c.o
+.PHONY : my_link.c.o
 
-atomic_inc.i: atomic_inc.cpp.i
+my_link.i: my_link.c.i
 
-.PHONY : atomic_inc.i
+.PHONY : my_link.i
 
 # target to preprocess a source file
-atomic_inc.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.i
-.PHONY : atomic_inc.cpp.i
+my_link.c.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/my_link.c.i
+.PHONY : my_link.c.i
 
-atomic_inc.s: atomic_inc.cpp.s
+my_link.s: my_link.c.s
 
-.PHONY : atomic_inc.s
+.PHONY : my_link.s
 
 # target to generate assembly for a file
-atomic_inc.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/atomic_inc.cpp.s
-.PHONY : atomic_inc.cpp.s
+my_link.c.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/my_link.c.s
+.PHONY : my_link.c.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... hello"
-	@echo "... atomic_inc.o"
-	@echo "... atomic_inc.i"
-	@echo "... atomic_inc.s"
+	@echo "... my_link.o"
+	@echo "... my_link.i"
+	@echo "... my_link.s"
 .PHONY : help
 
 

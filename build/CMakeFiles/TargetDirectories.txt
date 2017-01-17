@@ -1,3 +1,0 @@
-/alidata/cpp_demo/build/CMakeFiles/edit_cache.dir
-/alidata/cpp_demo/build/CMakeFiles/rebuild_cache.dir
-/alidata/cpp_demo/build/CMakeFiles/hello.dir

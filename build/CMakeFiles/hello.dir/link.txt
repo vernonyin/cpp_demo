@@ -1,1 +1,0 @@
-/usr/bin/c++   -g  -std=c++0x    CMakeFiles/hello.dir/atomic_inc.cpp.o  -o hello -rdynamic -lpthread 

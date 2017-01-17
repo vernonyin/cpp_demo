@@ -1,0 +1,53 @@
+//cmake -DCMAKE_BUILD_TYPE=Debug .. -Dfile=link.cpp
+#include <stdio.h>
+#include <stdlib.h>
+#include "include/my_list.h"
+
+struct fox
+{
+  struct list_element *list_of_el;
+};
+
+struct list_element
+{
+  void *data;
+  struct list_element *next;
+};
+
+int
+main ()
+{
+  printf ("fox size=%d\n", sizeof (struct fox));
+  printf ("list_element size=%d\n", sizeof (struct list_element));
+  char *str1 = "hello";
+  char *str2 = " world";
+
+  struct fox *head = (struct fox *) malloc (sizeof (struct fox));
+  if (list_empty (head->list_of_el))
+    {
+      printf ("link empty\n");
+    }
+  else
+    {
+      printf ("link not empty\n");
+    }
+
+  struct list_element *pos1 = head->list_of_el;
+  for (int i = 0; i < 10; i++)
+    {
+      struct list_element *lec2 =
+	(struct list_element *) malloc (sizeof (struct list_element));
+      lec2->data = (void *) i;
+      lec2->next = NULL;
+
+      list_add (head->list_of_el, lec2);
+      head->list_of_el = pos1;
+    }
+  struct list_element *pos = NULL;
+  list_for_each_entry (pos, head->list_of_el)
+  {
+    printf ("foreach data=%d\n", pos->data);
+  }
+
+  exit (0);
+}

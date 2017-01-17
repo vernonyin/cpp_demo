@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/alidata/cpp_demo/atomic_inc.cpp
-thread
--
-atomic
--
-unistd.h
--
+/alidata/cpp_demo/include/my_list.h
+
+/alidata/cpp_demo/my_link.c
 stdio.h
 -
-list
+stdlib.h
 -
-vector
--
-sys/time.h
--
+include/my_list.h
+/alidata/cpp_demo/include/my_list.h
 
