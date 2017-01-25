@@ -1,4 +1,4 @@
-//cmake -DCMAKE_BUILD_TYPE=Debug .. -Dfile=link.cpp
+//http://blog.csdn.net/jacktan/article/details/9268535构建配置
 #include <stdio.h>
 #include <stdlib.h>
 #include "include/my_list.h"

@@ -1,7 +1,7 @@
 /**
 原因好处：w
 1、内部定义临时变量
-
+ typeof比较奇怪，只能是c语言特定的
 **/
 
 
@@ -18,7 +18,6 @@ type((entry)+1)好处防止传入非指针或数组，高！
 		break;\
 	}\
 	if (head->next == NULL){\
-		pos = head;\
 		head->next = entry;\
 		break;\
 	}\
