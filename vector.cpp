@@ -17,11 +17,54 @@ using namespace std;
 /* http://www.cnblogs.com/dudupig123/archive/2010/08/04/1792352.html
  *
  * */
-int main1()
+int main()
 {
-uint32_t
 	/* vector 初始化方式*/
-	vector<int> v1={9,2,3,5,7};
+	vector<int> v1={9,2,3,3,5,7};
+
+
+	for(auto it=v1.begin();it!=v1.end();it++){
+		printf("v1==before==%d\n",*it);
+	}
+
+	for(auto it=v1.begin();it!=v1.end();it++){
+		if(*it == 3){
+			v1.erase(it);
+		}
+	}
+
+	vector<int>::iterator iter =v1.begin()+2;
+	v1.erase(iter);//注:这里真的不建议这么写
+
+	for(auto it=v1.begin();it!=v1.end();it++){
+		printf("v1==after==%d\n",*it);
+	}
+
+	std::vector<int>  my_container;
+	for (int i = 0; i < 10; ++i) {
+	     my_container.push_back(i);
+	}
+
+//
+//	std::vector<int>::iterator it = my_container.begin();
+//	for (;it != my_container.end(); it++) {
+//	    if (*it%4  == 1) {
+//	    	printf("erase \n");
+//	         my_container.erase(it);
+////	         it++;
+//		    	printf("*it=%d\n",*it);
+//	     }
+//	}
+
+//	for (;it != my_container.end(); ) {
+//		    if (*it%2  == 1) {
+//		    	it =  my_container.erase(it);
+//		     }else{
+//		    	 it++;
+//		     }
+//		}
+
+	return 0;
 	/* assign 赋值*/
 	vector<int> v2;
 	v2.assign(v1.begin(),v1.end());
@@ -42,7 +85,7 @@ uint32_t
 	}
 	/* 分配至少容纳reserve个元素的内存空间，并不改变容器中的元素数量,不能往下调整shrink_to_fit */
 	v1.reserve(1000);
-	v1.shrink_to_fit();
+//	v1.shrink_to_fit();
 	printf("size=%d\n",v1.capacity());
 
 	/* []越界不一定会报错，at会报错，要怎么捕获呢 !!!!!!!!*/
