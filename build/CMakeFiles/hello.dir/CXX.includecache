@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/yin/code/cpp_demo/class_size.cpp
-iostream
+/Users/yin/code/cpp_demo/string_point.cpp
+stdio.h
+-
+string.h
 -
 

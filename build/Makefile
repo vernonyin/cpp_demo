@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-class_size.o: class_size.cpp.o
+string_point.o: string_point.cpp.o
 
-.PHONY : class_size.o
+.PHONY : string_point.o
 
 # target to build an object file
-class_size.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/class_size.cpp.o
-.PHONY : class_size.cpp.o
+string_point.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.o
+.PHONY : string_point.cpp.o
 
-class_size.i: class_size.cpp.i
+string_point.i: string_point.cpp.i
 
-.PHONY : class_size.i
+.PHONY : string_point.i
 
 # target to preprocess a source file
-class_size.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/class_size.cpp.i
-.PHONY : class_size.cpp.i
+string_point.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.i
+.PHONY : string_point.cpp.i
 
-class_size.s: class_size.cpp.s
+string_point.s: string_point.cpp.s
 
-.PHONY : class_size.s
+.PHONY : string_point.s
 
 # target to generate assembly for a file
-class_size.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/class_size.cpp.s
-.PHONY : class_size.cpp.s
+string_point.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.s
+.PHONY : string_point.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hello"
-	@echo "... class_size.o"
-	@echo "... class_size.i"
-	@echo "... class_size.s"
+	@echo "... string_point.o"
+	@echo "... string_point.i"
+	@echo "... string_point.s"
 .PHONY : help
 
 

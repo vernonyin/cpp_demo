@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hello.dir/class_size.cpp.o"
+  "CMakeFiles/hello.dir/string_point.cpp.o"
   "hello.pdb"
   "hello"
 )
