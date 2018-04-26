@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-string_point.o: string_point.cpp.o
+duplication.o: duplication.cpp.o
 
-.PHONY : string_point.o
+.PHONY : duplication.o
 
 # target to build an object file
-string_point.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.o
-.PHONY : string_point.cpp.o
+duplication.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.o
+.PHONY : duplication.cpp.o
 
-string_point.i: string_point.cpp.i
+duplication.i: duplication.cpp.i
 
-.PHONY : string_point.i
+.PHONY : duplication.i
 
 # target to preprocess a source file
-string_point.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.i
-.PHONY : string_point.cpp.i
+duplication.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.i
+.PHONY : duplication.cpp.i
 
-string_point.s: string_point.cpp.s
+duplication.s: duplication.cpp.s
 
-.PHONY : string_point.s
+.PHONY : duplication.s
 
 # target to generate assembly for a file
-string_point.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/string_point.cpp.s
-.PHONY : string_point.cpp.s
+duplication.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.s
+.PHONY : duplication.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hello"
-	@echo "... string_point.o"
-	@echo "... string_point.i"
-	@echo "... string_point.s"
+	@echo "... duplication.o"
+	@echo "... duplication.i"
+	@echo "... duplication.s"
 .PHONY : help
 
 

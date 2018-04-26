@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/yin/code/cpp_demo/string_point.cpp
-stdio.h
+/Users/yin/code/cpp_demo/duplication.cpp
+iostream
 -
 string.h
+-
+stdlib.h
+-
+cmath
 -
 

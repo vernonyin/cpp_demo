@@ -28,8 +28,29 @@ class Derived: public Base
     }
 } ;
  
+#pragma pack(2)
+class BU
+{
+    typedef char*(*f)(void*);
+    typedef char*(*f2)(void*);
+    typedef char*(*f3)(void*);
+    typedef char*(*f4)(void*);
+    typedef char*(*f5)(void*);
+}bu;
+
+    typedef char*(*f6)(void*);
 int main()
 {
+  enum{hdd}disk;
+	int a=50;
+	int* pint = &a; 
+pint += 6; 
+//	printf("ping=%p",pint);
+	printf("ping=%d",pint);
+	printf("ping=%d",*pint);
+	printf("\n sizeof(enum)=%d\n",sizeof(disk));
+	return 0;
+	printf("sizeof(BU)=%d\n",sizeof(f6));	
     Derived stDerived;
     Base *pstBase = &stDerived;
  
