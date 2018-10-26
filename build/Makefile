@@ -126,32 +126,32 @@ hello/fast:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-duplication.o: duplication.cpp.o
+object_book.o: object_book.cpp.o
 
-.PHONY : duplication.o
+.PHONY : object_book.o
 
 # target to build an object file
-duplication.cpp.o:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.o
-.PHONY : duplication.cpp.o
+object_book.cpp.o:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/object_book.cpp.o
+.PHONY : object_book.cpp.o
 
-duplication.i: duplication.cpp.i
+object_book.i: object_book.cpp.i
 
-.PHONY : duplication.i
+.PHONY : object_book.i
 
 # target to preprocess a source file
-duplication.cpp.i:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.i
-.PHONY : duplication.cpp.i
+object_book.cpp.i:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/object_book.cpp.i
+.PHONY : object_book.cpp.i
 
-duplication.s: duplication.cpp.s
+object_book.s: object_book.cpp.s
 
-.PHONY : duplication.s
+.PHONY : object_book.s
 
 # target to generate assembly for a file
-duplication.cpp.s:
-	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/duplication.cpp.s
-.PHONY : duplication.cpp.s
+object_book.cpp.s:
+	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/object_book.cpp.s
+.PHONY : object_book.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hello"
-	@echo "... duplication.o"
-	@echo "... duplication.i"
-	@echo "... duplication.s"
+	@echo "... object_book.o"
+	@echo "... object_book.i"
+	@echo "... object_book.s"
 .PHONY : help
 
 

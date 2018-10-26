@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g  -std=c++0x  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/hello.dir/duplication.cpp.o  -o hello -lpthread 
+/Library/Developer/CommandLineTools/usr/bin/c++  -g  -std=c++0x  -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/hello.dir/object_book.cpp.o  -o hello -lpthread 

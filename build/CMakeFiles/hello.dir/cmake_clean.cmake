@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hello.dir/duplication.cpp.o"
+  "CMakeFiles/hello.dir/object_book.cpp.o"
   "hello.pdb"
   "hello"
 )
