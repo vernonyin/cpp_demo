@@ -35,6 +35,21 @@ public:
     * [cur]->[c]->[d]
     *
     * */
+    ListNode* Reverse1027(ListNode* head){
+        ListNode* cur = head;
+        ListNode* pre =NULL;
+        while (cur){
+            ListNode* tmp = cur->next;
+
+            cur->next = pre;
+
+            pre = cur;
+            cur=cur->next;
+        }
+        return pre;
+    }
+
+
     ListNode *Reverse(ListNode *pHead) {
         ListNode *pre = NULL;
         ListNode *cur = pHead;
@@ -48,18 +63,49 @@ public:
         return pre;
     }
 
-    ListNode *SwapPairs2(ListNode *head) {
-        if (!head) return NULL;
-        ListNode tmp(0); //临时结点
+    ListNode* SwapPairs102722(ListNode *head) {
+        ListNode tmp(0);
         tmp.next = head;
-        ListNode *pre = &tmp;
         ListNode *cur = head;
-
+        ListNode *pre = &tmp;
         while (cur && cur->next) {
             pre->next = cur->next;
             pre = cur->next;
+            cur->next = pre->next;
+            pre->next = cur;
+
+            pre = cur;
+            cur = cur->next;
+
         }
+        return tmp.next;
     }
+
+    ListNode* SwapPairs1027(ListNode *head){
+        ListNode tmp(0);
+        tmp.next = head;
+        ListNode* cur = head;
+        ListNode* pre = &tmp;
+        while(cur && cur->next){
+            // [pre0] 2->3->4
+            pre->next = cur->next;
+            // [pre 2]->3->4
+            pre = cur->next;
+            // cur 1->3->4
+            cur->next = pre->next;
+            // pre 2->1->3->4
+            pre->next = cur;
+
+            pre = cur;
+            cur = cur->next;
+            //已经完成转换了
+            pre = cur;
+            cur = cur->next;
+        }
+
+        return  tmp.next;
+    }
+
 
     /*
      *   [1]   ->  [2] ->[3]->[4]
@@ -117,25 +163,6 @@ public:
         }
         return tmp.next;
 
-    }
-    ListNode *SwapPairsMy(ListNode *head) {
-        ListNode *tmp = new ListNode(0);
-        ListNode *pre = tmp;
-        ListNode *cur = head;
-
-        while (cur && cur->next){
-            pre->next = cur->next;
-            pre = cur->next;
-
-            cur->next = pre->next;
-            pre->next = cur;
-
-            pre = cur;
-            cur = cur->next;
-
-        }
-
-        return tmp->next;
     }
 
     ListNode *SwapPairs(ListNode *head) {
@@ -196,7 +223,7 @@ int main() {
     Print(link);
     link = s.Reverse(link);
 
-    link = s.SwapPairsMy2(link);
+    link = s.SwapPairs1027(link);
     Print(link);
 
     return 0;
