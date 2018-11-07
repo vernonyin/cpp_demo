@@ -3,6 +3,9 @@
  *
  *  Created on: 2018年4月19日
  *      Author: Administrator
+ *
+ *      总结：
+ *      第一个节点要变动的就要申请一个假节点
  */
 
 #include <iostream>
@@ -11,6 +14,7 @@
 #include <cmath>
 
 using namespace std;
+
 
 /*
  * 单项链表就是一个起始的栈
@@ -35,16 +39,16 @@ public:
     * [cur]->[c]->[d]
     *
     * */
-    ListNode* Reverse1027(ListNode* head){
-        ListNode* cur = head;
-        ListNode* pre =NULL;
-        while (cur){
-            ListNode* tmp = cur->next;
+    ListNode *Reverse1027(ListNode *head) {
+        ListNode *cur = head;
+        ListNode *pre = NULL;
+        while (cur) {
+            ListNode *tmp = cur->next;
 
             cur->next = pre;
 
             pre = cur;
-            cur=cur->next;
+            cur = cur->next;
         }
         return pre;
     }
@@ -63,7 +67,35 @@ public:
         return pre;
     }
 
-    ListNode* SwapPairs102722(ListNode *head) {
+    ListNode *SwapPairs1031(ListNode *head) {
+//        ListNode tmp;
+//        tmp.next = head;
+//        ListNode* pre = tmp;
+//        ListNode* cur = head;
+//        while(cur->next && cur->next->next){
+//            // pre0 -cur 1-2-3-4
+//            pre->next = cur->next;
+//            pre = cur->next;
+//            //1-2-3-4
+//            //pre 2-3-4
+//            cur->next = pre->next;
+//            //cur 1-3-4
+//            pre->next = cur;
+//
+//            pre = cur;
+//            cur = cur->next;
+//        }
+//        return tmp.next;
+
+
+
+
+
+
+
+
+
+
         ListNode tmp(0);
         tmp.next = head;
         ListNode *cur = head;
@@ -81,12 +113,13 @@ public:
         return tmp.next;
     }
 
-    ListNode* SwapPairs1027(ListNode *head){
+    //观察指针的变化
+    ListNode *SwapPairs1027(ListNode *head) {
         ListNode tmp(0);
         tmp.next = head;
-        ListNode* cur = head;
-        ListNode* pre = &tmp;
-        while(cur && cur->next){
+        ListNode *cur = head;
+        ListNode *pre = &tmp;
+        while (cur && cur->next) {
             // [pre0] 2->3->4
             pre->next = cur->next;
             // [pre 2]->3->4
@@ -103,7 +136,7 @@ public:
             cur = cur->next;
         }
 
-        return  tmp.next;
+        return tmp.next;
     }
 
 
@@ -145,13 +178,13 @@ public:
      * [cur 3] ->[4]
      * */
     ListNode *SwapPairsMy2(ListNode *head) {
-        if (head ==NULL) return head;
+        if (head == NULL) return head;
         ListNode tmp(0);
         tmp.next = head;
         ListNode *pre = &tmp;
-        ListNode * cur = head;
+        ListNode *cur = head;
 
-        while (cur && cur->next){
+        while (cur && cur->next) {
             pre->next = cur->next;
             pre = pre->next;
 
@@ -184,6 +217,300 @@ public:
         return tmp.next;
     }
 
+    //公共节点：pa，pb都会遍历两条链表，遍历次数是一样的。如果没有最后为null
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode *pa = headA, *pb = headB;
+        while (pa != pb) {
+            // pa 1->5->3->4
+            // pb 2->3->4
+            pa = (pa != NULL) ? pa->next : headB;
+            pb = (pb != NULL) ? pb->next : headA;
+
+            /**
+             * pa:1-5-3-4-2-3-4
+             * pb:2-3-4-1-5-3-4
+             *
+             * 1-2-3
+             * 4-5-6
+             *
+             * 1-2-3-4-5-6
+             * 4-5-6-1-2-3
+             */
+        }
+        return pa;
+    }
+
+    //倒数第k个元素:保留pk和cur两个指针，同时移动
+    ListNode *FindKthToTail(ListNode *head, int k) {
+        ListNode *pk = head, *cur = head;
+        int i = 0;
+        while (cur) {
+
+            if (i++ >= k) {
+                pk = pk->next;
+            }
+            cur = cur->next;
+            /*
+            if (i++ >= k){
+                cur = cur->next;
+                continue;
+            }else{
+                pk = pk->next;
+                cur = cur->next;
+            }
+             */
+        }
+        return pk;
+    }
+
+    //旋转k次
+    ListNode* rotateRight(ListNode* head, int k) {
+        if (!head) return NULL;
+
+        ListNode *tail = head;
+        //错误1：计算链表长度不对
+        int length = 0;
+        while(tail){
+            tail=tail->next;
+            ++length;
+        }
+
+        //错误2：没有拼接成一个环
+        tail = head;
+        while (tail->next){
+            tail = tail->next;
+        }
+        tail->next = head;
+
+        int rk = k%length;
+        ListNode* pre = head;
+        ListNode* cur = head;
+
+        for(int i=0;i<length-rk;i++){
+            pre = cur;
+            cur = cur->next;
+        }
+
+        pre->next = nullptr;
+        return cur;
+
+        /*
+        ListNode* pre = head;
+        ListNode* cur = head;
+        bool  end=false;
+        while(k--){
+            pre = cur;
+            cur = cur->next;
+            if (cur->next == NULL){
+                cur->next = head;
+                end = true;
+            }
+        }
+        ListNode* h = cur;
+        if (!end){
+            while(cur){
+                cur = cur->next;
+                if (cur->next == NULL){
+                    cur->next = head;
+                   break;
+                }
+            }
+        }
+        pre->next = NULL;
+        return h;
+
+         */
+    }
+
+    ListNode* rotateRight2(ListNode* head, int k) {
+        if (!head) return NULL;
+
+        ListNode *tail = head;
+        //错误1：计算链表长度不对
+        int length = 1;
+        while (tail->next) {
+            tail = tail->next;
+            ++length;
+        }
+        tail->next = head;
+
+        //错误2：没有拼接成一个环
+        //错误3：两个操作可以合并
+        //错误4：tail又重新接上了
+
+        int rk = k % length;
+        tail = tail->next;
+
+        ListNode* pre = head;
+        for (int i = 0; i < length - rk; i++) {
+            pre = tail;
+            tail = tail->next;
+        }
+
+        pre->next = NULL;
+        return tail;
+    }
+
+    //判断是否有环
+    bool findCycle(ListNode *head) {
+        //100 分
+//        if (head == nullptr)return head;
+//        ListNode* first =head;
+//        ListNode* second = head;
+//        while(second->next && second->next->next){
+//            first = first->next;
+//            second = second->next->next;
+//            if (first == second){
+//                return true;
+//            }
+//        }
+//        return false;
+
+
+
+
+
+
+
+        if(!head )
+            return false;
+
+        ListNode* first = head,*second = head;
+
+        //错误1：判断是否为空
+        while(second->next && second->next->next){
+             first = first->next;
+             second = second->next->next;
+             if (first == second){
+                 return true;
+             }
+        }
+        return  false;
+    }
+
+
+    ListNode *detectCycle(ListNode *head) {
+        if (head == NULL || head->next == NULL) return NULL;
+
+        ListNode* firstp = head;
+        ListNode* secondp = head;
+        bool isCycle = false;
+
+        while(firstp != NULL && secondp != NULL) {
+            firstp = firstp->next;
+            if (secondp->next == NULL) return NULL;
+            secondp = secondp->next->next;
+            if (firstp == secondp) { isCycle = true; break; }
+        }
+
+        if(!isCycle) return NULL;
+        firstp = head;
+        while( firstp != secondp) {
+            firstp = firstp->next;
+            secondp = secondp->next;
+        }
+
+        return firstp;
+    }
+
+    //保留一个
+    ListNode* deleteDuplication3(ListNode* pHead) {
+        ListNode* cur = pHead->next;
+        ListNode* pre = pHead;
+        //1-1-2-2-2-3
+        //pre pos1 pos2
+        while(cur){
+            if (pre->val == cur->val){
+                pre->next = cur->next;
+            }else{
+                pre = pre->next;
+            }
+
+            cur = cur->next;
+        }
+//        return pHead;
+        ListNode* current = pHead;
+        while (current != NULL && current->next != NULL) {
+            if (current->next->val == current->val) {
+                current->next = current->next->next;
+            } else {
+                current = current->next;
+            }
+        }
+        return pHead;
+    }
+    ListNode* deleteDuplication2(ListNode* pHead)
+    {
+        if (!pHead || !pHead->next) return pHead;
+
+        ListNode tmp(0);
+        tmp.next = pHead;
+        ListNode* pre = &tmp;
+        ListNode* cur = pHead;
+        //1,2,2,3,4
+//        //pre 0-1-2-2-3-4
+        // 0 -cur 1-2-2-3-4
+        while(cur){
+            if(cur->next && pre->next->val == cur->next->val){
+                do{
+                    cur = cur->next;
+                }
+                while(cur->next && pre->next->val == cur->next->val);
+                pre->next = cur->next;
+            } else{
+                pre = pre->next;
+            }
+
+
+            cur = cur->next;
+        }
+        return tmp.next;
+    }
+
+    //https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&tqId=11209&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
+    //删除重复的 重复的不保留
+    ListNode* deleteDuplication(ListNode* pHead)
+    {
+        if (!pHead || !pHead->next) return pHead;
+
+        ListNode tmp(0);
+        tmp.next = pHead;
+        ListNode* pre = &tmp;
+        ListNode* cur = pHead;
+        //1,2,2,3,4
+//        //pre 0-1-2-2-3-4
+        // 0 -cur 1-2-2-3-4
+        while(cur){
+            if(cur->next && pre->next->val == cur->next->val){
+                do{
+                    cur = cur->next;
+                }
+                while(pre->next->val == cur->next->val);
+                pre->next = cur->next;
+            } else{
+                pre = pre->next;
+            }
+
+
+            cur = cur->next;
+        }
+        return tmp.next;
+//
+//        ListNode* cur = pHead->next;
+//        ListNode* pre = pHead;
+//        //1-1-2-2-2-3
+//        //pre pos1 pos2
+//        while(cur){
+//            if (pre->val == cur->val){
+//                pre->next = cur->next;
+//            }else{
+//                pre = pre->next;
+//            }
+//
+//            cur = cur->next;
+//        }
+//        return pHead;
+    }
 
 };
 
@@ -204,6 +531,17 @@ ListNode *New(int num) {
     return head;
 }
 
+ListNode *NewArray(int* arr,int num) {
+    ListNode *head = new ListNode(arr[0]);
+    ListNode *cur = head;
+    for (int i = 1; i < num; i++) {
+        ListNode *node = new ListNode(arr[i]);
+        cur->next = node;
+        cur = node;
+    }
+    return head;
+}
+
 //打印链表
 void Print(const ListNode *l) {
     printf("=============================\n");
@@ -213,18 +551,60 @@ void Print(const ListNode *l) {
     }
 }
 
+enum {
+    REVERSE,
+    SWAP,
+    intersection,
+    FindKthToTail,
+    rotateRight,
+    deleteDuplication
+};
+
 int main() {
     Solution s;
-    ListNode *link = New(4);
-    Print(link);
+    ListNode *link = New(3);
 
+    int arr[]={1,2,3,3,4,4,5};
+    ListNode *linkArr = NewArray(arr,7);
 
-    link = s.Reverse(link);
-    Print(link);
-    link = s.Reverse(link);
+    int i=deleteDuplication;
+    int test = 0+i;
 
-    link = s.SwapPairs1027(link);
-    Print(link);
+    if (test == deleteDuplication){
+        Print(linkArr);
+        link = s.deleteDuplication3(linkArr);
+        Print(linkArr);
+    }
+    else if (test == REVERSE) {
+        Print(link);
+        link = s.Reverse(link);
+        Print(link);
+    } else if (test == SWAP) {
+        Print(link);
+        link = s.SwapPairs1027(link);
+        Print(link);
+    } else if (test == intersection) {
+        ListNode *link2 = new ListNode(0);
+        link2->next = link->next->next;
+        Print(link);
+
+        link = s.getIntersectionNode(link, link2);
+        printf("======getIntersectionNode=======\n");
+        Print(link);
+
+        ListNode *link3 = new ListNode(0);
+        link = s.getIntersectionNode(link, link3);
+        printf("======getIntersectionNode=======\n");
+        Print(link);
+    } else if (test == FindKthToTail) {
+        ListNode *kNode = s.FindKthToTail(link, 5);
+        printf("======FindKthToTail=======\n");
+        Print(kNode);
+    } else if (test ==rotateRight){
+        ListNode *kNode = s.rotateRight2(link, 4);
+        printf("======rotateRight=======\n");
+        Print(kNode);
+    }
 
     return 0;
 }

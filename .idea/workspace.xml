@@ -12,21 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77dcea9d-6859-4901-9ac5-03dc2f4c7452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/reverse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/pow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/tree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/twostack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/window.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link_intersection.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arr.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/arr.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/duplication.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/hello" beforeDir="false" afterPath="$PROJECT_DIR$/build/hello" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/virtual_construct.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_construct.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/reverse.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,52 +34,69 @@
     <session id="-1826284373">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cpp" value="8" />
-          <entry key="h" value="2" />
+          <entry key="__config" value="1" />
+          <entry key="cpp" value="15" />
+          <entry key="deque" value="1" />
+          <entry key="h" value="4" />
+          <entry key="stack" value="3" />
           <entry key="string" value="1" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CMakeLists.txt" value="2" />
-          <entry key="ObjectiveC" value="11" />
+          <entry key="CMakeLists.txt" value="3" />
+          <entry key="ObjectiveC" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="LLDB" value="12" />
-          <entry key="cpp" value="1943" />
-          <entry key="txt" value="10" />
+          <entry key="cpp" value="7713" />
+          <entry key="mm" value="10" />
+          <entry key="txt" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="10" />
+          <entry key="CMakeLists.txt" value="46" />
+          <entry key="Doxygen file" value="12" />
           <entry key="LLDBCommands" value="12" />
-          <entry key="ObjectiveC" value="1943" />
+          <entry key="ObjectiveC" value="7711" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/reverse.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/deque">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-112">
-              <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+            <state relative-caret-position="160">
+              <caret line="1762" selection-start-line="1762" selection-end-line="1762" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/window.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
-                <element signature="e#83#102#0" expanded="true" />
+                <element signature="e#79#98#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +111,7 @@
       <find>ListNode</find>
       <find>ReverseList</find>
       <find>print</find>
+      <find>detectCycle</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -112,8 +124,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/arr.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/link_intersection.cpp" />
+        <option value="$PROJECT_DIR$/tree.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/twostack.cpp" />
         <option value="$PROJECT_DIR$/reverse.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/tree.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/pow.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/leetcode/window.cpp" />
       </list>
     </option>
   </component>
@@ -124,8 +142,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="532" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="17" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="801" />
@@ -141,6 +159,11 @@
             <path>
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpp_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cpp_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
@@ -201,33 +224,36 @@
       <workItem from="1540083941591" duration="687000" />
       <workItem from="1540268672551" duration="596000" />
       <workItem from="1540517903194" duration="3560000" />
-      <workItem from="1540554588787" duration="8126000" />
+      <workItem from="1540554588787" duration="20064000" />
+      <workItem from="1540874138111" duration="7280000" />
+      <workItem from="1541033347662" duration="5555000" />
+      <workItem from="1541567653958" duration="550000" />
+      <workItem from="1541605377493" duration="2135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14945000" />
+    <option name="totallyTimeSpent" value="42403000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="805" extended-state="6" />
-    <editor active="true" />
+    <frame x="17" y="23" width="1440" height="801" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20314735" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49074075" visible="true" weight="0.21459228" />
+      <window_info id="Structure" order="1" sideWeight="0.5092593" side_tool="true" visible="true" weight="0.21459228" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1889986" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23842917" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3906911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3253857" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.4654443" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.28490832" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.28208745" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -240,16 +266,16 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1889986" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18053597" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.45903614" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32650602" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32409638" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.28490832" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.28433734" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -272,11 +298,85 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/reverse.cpp</url>
-          <line>147</line>
+          <line>207</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>135</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>222</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>318</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>293</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>334</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>350</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>502</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>503</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/reverse.cpp</url>
+          <line>483</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/tree.cpp</url>
+          <line>91</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/pow.cpp</url>
+          <line>33</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/window.cpp</url>
+          <line>38</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/window.cpp</url>
+          <line>26</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>dq.size()</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/median.cpp">
@@ -329,19 +429,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/link_intersection.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="291">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/stack">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160">
+          <caret line="106" column="19" lean-forward="true" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="679" column="14" selection-start-line="679" selection-start-column="14" selection-end-line="679" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reverse.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+        <state relative-caret-position="13512">
+          <caret line="563" column="4" selection-start-line="563" selection-start-column="4" selection-end-line="563" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2112">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
-            <element signature="e#83#102#0" expanded="true" />
+            <element signature="e#2#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/stdlib.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2526" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/pow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/twostack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="31" column="22" selection-end-line="37" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/deque">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="1762" selection-start-line="1762" selection-end-line="1762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/window.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#79#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
