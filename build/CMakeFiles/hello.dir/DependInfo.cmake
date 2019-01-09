@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/yin/code/cpp_demo/object_book.cpp" "/Users/yin/code/cpp_demo/build/CMakeFiles/hello.dir/object_book.cpp.o"
+  "/Users/yin/code/cpp_demo/leetcode/map.cpp" "/Users/yin/code/cpp_demo/build/CMakeFiles/hello.dir/leetcode/map.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
