@@ -75,6 +75,24 @@ public:
 		printf("end\n");
 		return cur;
     }
+	
+	 ListNode* deleteDuplication(ListNode* pHead)
+    {
+         ListNode tmp(0);
+        ListNode *cur = &tmp;
+        while(pHead && pHead->next){
+            if (pHead->val == pHead->next->val){
+                cur->next = pHead->next->next;
+                pHead = pHead->next->next;
+            }else{
+                cur->next = pHead;
+                pHead = pHead->next;
+            }
+            cur = cur->next;
+        }
+        
+        return tmp.next;
+    }
 };
 
 /*
