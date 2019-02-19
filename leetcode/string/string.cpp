@@ -1,9 +1,6 @@
 //
 // Created by yin on 2018/11/11.
 //
-
-//
-// Created by yin on 2018/11/7.
 //
 
 #include <iostream>

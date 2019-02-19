@@ -11,7 +11,7 @@ struct shared_use_st
 	char text[TEXT_SZ];//记录写入和读取的文本
 };
 
-int main_sh_w()
+int main()
 {
 	int running = 1;
 	void *shm = NULL;

@@ -1,0 +1,673 @@
+// flatc -c -j --gen-mutable ./mm.fbs
+
+namespace mm;
+
+// 出入金类型，提款、存款、存支票、卖入，买出
+enum CashIOType: ubyte {NONE = 0, Withdraw, Deposit, DepositChq, SellIn, BuyOut}
+
+// 出入金媒介，银行柜台、存款机、支票箱、转账汇款、其它
+enum CashMedia: ubyte {NONE = 0, Counter, ATM, Box, Transfer, Other}
+
+// 结算单类型，日结单、月结单
+enum SettleType: ubyte {NONE = 0, DaySett, MonSett}
+
+// 动作类型，踢出、警告、通知、需要进一步操作、超时
+enum Action: ubyte {NONE = 0, Kickoff, Warn, Notify, More, Timeout, Acc_Reset, Counter_Lineoff}
+
+// 市场
+enum Market: ubyte {NONE = 0, HKEX, HKF, CME, CBOT, COMEX, NYMEX, LME, SGX, PUROX}
+
+// 下单类型
+enum Entrust_mode: ubyte {NONE = 0, Buy, Sell, Cancel, Update, Clear}
+
+// 报价类型，限价、增强限价、特别限价、市价、竞价
+enum Price_mode: ubyte {NONE = 0, PL, EL, SL, M, AO}
+
+// 成交类型，成交剩余撤销、成交否则撤销、Good till day, Good till cancel
+enum Deal_mode: ubyte {NONE = 0, FAK, FOK, GTD, GTC}
+
+// 委托单状态，已收到委托、废单、等待中、批核中、处理中、排队中、已拒绝、已取消、部分撤单、部分成交、全部成交
+enum Entrust_status: ubyte {NONE = 0, RECV, ABA, NEW, WA, PRO, Q, REJ, CAN, PCAN, PEX, FEX}
+
+// 委托操作状态，成功、待上手/交易所确认（单已经在上手那边）、无效
+enum Op_status: ubyte {SUCC = 0, CR, REJ}
+
+// 终端类型
+enum TerminalType: ubyte {NONE = 0, PC, WEB, ANDROID, IPHONE, AE, MAC, SERVER}
+
+// 查询分页模式
+// ALL: 一次性返回，SYNC: 同步分页返回（一问一答），ASYNC: 异步分页返回（一问多答）
+enum Page_mode: ubyte {ALL = 0, SYNC, ASYNC}
+
+// 语言
+enum Lang: ubyte {ENG = 0, CHS, CHT}
+
+// 产品类型，期货、期权、股票
+enum ProductType: ubyte {NONE, FUT, OPT, EQTY}
+
+// 产品二级类型，期货、Spread、Call、Put、股票、债券、基金、认股证/牛熊证
+enum ProductSubType: ubyte {NONE, F, S, C, P, EQTY, BOND, TRST, WRNT}
+
+// 状态，正常，冻结，无效
+enum Status: ubyte {NONE = 0, A, S, C}
+
+// 币种
+// CNY: 人民币（在岸）
+// HKD: 港币
+// USD: 美元
+// JPY: 日元
+// EUR: 欧元
+// GBP: 英镑
+// SGD: 新加坡币
+// CAD: 加元
+// AUD: 澳元
+// KRW: 韩元
+// TWD: 台币
+// IDR: 印尼卢比
+// MYR: 马来西亚林吉特
+// THB: 泰铢
+// CNH: 人民币（离岸）
+// RUB: 俄罗斯卢布
+// BND: 文莱元
+// CHF: 瑞士法郎
+// DKK: 丹麦克朗
+// INR: 印度卢比
+// MOP: 澳门元
+// NOK: 挪威克朗
+// NZD: 新西兰元
+// PHP: 菲律宾比索
+// SEK: 瑞士克朗
+// ZAR: 南非兰特
+// ZRH: 
+enum Currency: ubyte {NONE = 0, CNY, HKD, USD, JPY, EUR, GBP, SGD, CAD, AUD, KRW, TWD, IDR, MYR, THB, CNH, RUB, BND, CHF, DKK, INR, MOP, NOK, NZD, PHP, SEK, ZAR, ZRH}
+
+// 通讯模式，推送、请求应答
+enum CommMode: ubyte {NONE = 0, P, RR}
+
+//止亏止盈条件类型, 限价止损、升市触发、跌市触发、增强止损、双向限价盘、牛市与熊市
+enum SpecialType: ubyte {NONE=0, SL, UT, DT, TR, OCO, TCLS}
+
+// 保证金计算模式：SPAN计算、直接取值
+enum MarginMode: ubyte {SPAN = 0, NET}
+
+
+table Pair {
+    first: string;
+    second: string;
+}
+
+table Result {
+    errcode: string;    // 错误代码，不存在该字段或该字段为空字符串""，表示业务成功，否则业务失败
+    errmsg: string;     // 错误信息
+}
+
+table Bank {
+    bankid: uint;
+    eng_name: string;               // 英文名
+    cht_name: string;               // 繁体名
+    chs_name: string;               // 简体名
+    extras: [Pair];
+}
+
+table Banks {
+    items: [Bank];
+    extras: [Pair];
+}
+
+table Account {
+    user: string;           // 客户名称
+    client_acc: string;     // 客户账号
+    session: string;        // 会话id
+    uuid_3rd: string;       // 第三方登录uuid
+    mobile: string;         // 手机号码
+    extras: [Pair];
+}
+
+table Query_page
+{
+    mode: Page_mode;    // 分页模式，一次性返回、一问一答、一问多答
+    idx: uint;          // 请求：从第几条数据开始查询，应答：下一个查询应答包的起始数据索引，如果没有下一个应答包，置为-1，如果数据提供者也不知道是否存在下一个应答包，置为0
+    count: uint;        // 请求包：最多返回多少条数据，应答包：符合查询条件一共有多少条数据，>=真实返回的数量
+}
+
+table Deal_summary {
+    deal_day: string;           // 成交日期
+    entrust_no: string;         // 委托编号
+    deal_qty: string;           // 已成交量
+    queue_qty: string;          // 待成交量
+    deal_price: string;         // 成交均价，不包含手续费
+    amount: string;             // 成交金额
+    status: Entrust_status;     // 委托状态
+    extras: [Pair];
+}
+
+table Deal_detail {
+    acc: Account;
+    deal_time: string;          // 成交时间
+    entrust_no: string;         // 委托编号
+    market: Market;             // 市场代码
+    symbol: string;             // 证券代码
+    bargain_no: string;         // 从柜台返回的成交编号
+    direction: Entrust_mode;    // 买入、卖出、撤单、改单
+    price: string;              // 成交价格，撤单该字段为空
+    deal_qty: string;           // 成交量
+    queue_qty: string;          // 待成交量
+    opponent_entrust_no: string;// 从柜台返回的对手方委托编号
+    commission: string;         // 佣金
+    charge: string;             // 交易费用
+    extras: [Pair];
+}
+
+table Capital_detail {
+    acc: Account;
+    time: string;                   // 发生时间
+    serialno: string;               // 流水号
+    business_type: CashIOType;      // 资金流水类型，出金、入金、买出、卖入、结息等等
+    media_type: CashMedia;          // 媒介类型，现金、支票、汇款单等等
+    bankid: Bank;                   // 相关银行
+    amount: string;                 // 发生金额
+    ccy: Currency;                  // 币种
+    extras: [Pair];
+}
+
+table Fee {
+    ccass: string;              // CCASS费用
+    commission: string;         // 佣金
+    stamp: string;              // 印花税
+    levy: string;               // 交易费
+    charge: string;             // 手续费（汇总）
+    tradevalue: string;         // 交易金额，价格*数量，不包括费用
+    other: string;              // 其他费用
+    tariff: string;             // 交易系统使用费
+    extras: [Pair];
+}
+
+table Entrust {
+    acc: Account;
+    market: Market;
+    symbol: string;
+    order_time: string;
+    ccy: Currency;
+    direction: Entrust_mode;        // 买入、卖出、撤单、改单
+    price_mode: Price_mode;         // 限价、增强限价等等(条件单在此增加类型枚举)
+    deal_mode: Deal_mode;           // FAK、FOK、GTD、GTC
+    price: string;
+    qty: string;
+    deal_qty: string;
+    os_qty: string;
+    entrust_no: string;             // 委托单号
+    related_entrust_no: string;     // 待撤(待改)委托单号
+    status: Entrust_status;         // 委托状态
+    loan_ratio: ushort;             // 融资比例
+    input_channel: TerminalType;    // 下单终端类型
+    extras: [Pair];                  // 条件单的条件参数、GTD参数
+    deal: Deal_summary;             // 成交汇总
+    fee: Fee;                       // 交易费用
+    spec_cond: SpecialCond;         //止亏止盈条件
+	update_time: string;	// 委托最新更新时间
+	T_1: bool;				// 是否T+1
+	sub_status: string;		// 子状态: 大写 i 为无效
+}
+
+//止亏止盈条件
+table SpecialCond {
+    Spec_type: SpecialType;         //止亏止盈条件类型
+    Spec_direction: Entrust_mode;   //买入、卖出
+    trigger_price: string;          //触发价格
+    stop_loss_price: string;        //止损价
+    pursuit_price: string;          //追价
+    step: string;                   //梯级
+    target_profit_price: string;    //止盈价
+    extras: [Pair];
+}
+
+// 客户登录
+table Login {
+    acc: Account;
+    pwd: string;                    // 客户密码
+    device_code: string;            // 设备唯一编码
+    device_name: string;            // 设备名称
+    otp: string;                    // OTP验证码
+    language: Lang;                 // 终端语言，繁体、简体、英文
+    ip: string;                     // 登录IP地址
+    terminal: TerminalType;         // 登录终端类型
+    encrypt_key: string;            // 在客户端API启用
+    push_serialno: uint;            // 客户端续传序列号
+    extras: [Pair];
+}
+
+// 客户登录应答
+table Login_rsp {
+    rsp: Result;
+    acc: Account;
+    name: string;                   // 客户默认账号的名称
+    status: Status;                 // 账号状态，正常、冻结、销户
+    last_login_time: string;        // 上次登录时间
+    encrypt_key: string;            // 在客户端API启用
+    session: string;                // 会话id
+    extras: [Pair];
+}
+// extras data
+// force_change_pwd = Y/N           首次登录强制修改密码
+
+// 修改密码
+table ChangePwd {
+    acc: Account;
+    pwd: string;                    // 客户密码
+    newpwd: string;                 // 新密码
+    otp: string;                    // 验证码
+    extras: [Pair];
+}
+
+// 查询委托
+table QueryConsign {
+    acc: Account;
+    page: Query_page;
+    market: Market;                 // 市场代码
+    symbol: string;                 // 合约代码
+    begin_date: string;             // 查询起始日期
+    end_date: string;               // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询委托应答
+table QueryConsign_rsp {
+    rsp: Result;
+    page: Query_page;
+    orders: [Entrust];
+    extras: [Pair];
+    acc: Account;
+}
+
+// 查询持仓
+table Query_hold {
+    acc: Account;
+    page: Query_page;
+    market: Market;
+    extras: [Pair];
+}
+
+// 查询持仓应答
+table Query_hold_rsp {
+    res: Result;
+    page: Query_page;
+    holds: [Hold];
+    extras: [Pair];
+     acc: Account;
+}
+
+// 查询资金请求
+table Query_fund {
+    acc: Account;
+    ccy: Currency = HKD;
+    extras: [Pair];
+}
+
+// 查询资金应答
+table Query_fund_rsp {
+    res: Result;
+    items: [Fund];
+    extras: [Pair];
+    acc: Account;
+}
+
+// 查询成交
+table QueryBargain {
+    acc: Account;
+    page: Query_page;
+    market: Market;                 // 市场代码
+    symbol: string;                 // 合约代码
+    entrust_no: string;             // 委托编号
+    begin_date: string;             // 查询起始日期
+    end_date: string;               // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询成交应答
+table QueryBargain_rsp {
+    res: Result;
+    page: Query_page;
+    deals: [Deal_detail];
+    extras: [Pair];
+    acc: Account;
+}
+
+// 查询资金流水
+table QueryCapital {
+    acc: Account;
+    ccy: Currency;
+    page: Query_page;
+    date_from: string;          // 查询起始日期
+    date_to: string;            // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询资金流水应答
+table Query_capital_rsp {
+    res: Result;
+    page: Query_page;
+    items: [Capital_detail];
+    extras: [Pair];
+}
+
+// 银期转账请求
+table FundTransfer {
+    acc: Account;
+    ccy: Currency;
+    bankid: Bank;
+    sum: string;                // 转账金额
+    media_type: CashMedia;      // 媒介类型，现金、支票、汇款单等等
+    time: string;               // 发生时间(精确到分)
+    remark: string;             // 备注
+    extras: [Pair];
+}
+
+// 查询银期转账流水
+table Query_ftflow {
+    acc: Account;
+    page: Query_page;
+    bankid: Bank;
+    date_from: string;          // 查询起始日期
+    date_to: string;            // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询银期转账流水应答
+table Query_ftflow_rsp {
+    res: Result;
+    page: Query_page;
+    items: [FundTransfer];
+    extras: [Pair];
+}
+
+// 查询股份存取流水
+table QueryPosition {
+    acc: Account;
+    page: Query_page;
+    market: Market;
+    symbol: string;
+    date_from: string;          // 查询起始日期
+    date_to: string;            // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询股份存取流水应答
+table Query_position_rsp {
+    res: Result;
+    page: Query_page;
+    items: [PositionNotify];
+    extras: [Pair];
+}
+
+// 查询结算单
+table Query_settlement {
+    acc: Account;
+    page: Query_page;
+    settlement_type: SettleType;    // 结算单类型，日结单，月结单
+    date_from: string;              // 查询起始日期
+    date_to: string;                // 查询结束日期
+    extras: [Pair];
+}
+
+// 查询结算单应答
+table Query_settlement_rsp {
+    res: Result;
+    page: Query_page;
+    urls: [string];                 // 结算单链接
+    extras: [Pair];
+}
+
+// 查询最大可买
+table Query_maxbuy {
+    acc: Account;
+    market: Market;
+    symbol: string;
+    power: string;
+    price: string;
+    extras: [Pair];
+}
+
+// 查询最大可买应答
+table Query_maxbuy_rsp {
+    res: Result;
+    qty: string;
+    extras: [Pair];
+}
+
+// 下单应答
+table Entrust_rsp {
+    res: Result;
+    entrust: Entrust;
+    extras: [Pair];
+}
+
+// 全部撤单/平仓
+table EntrustAll {
+    acc: Account;
+    market: Market;         // 市场代码
+}
+
+
+table Exrate {
+    ccy: Currency;          // 外币币种
+    rate: string;           // 1外币对换本币
+}
+
+table Exrates {
+    ccy: Currency;          // 本币币种
+    rates: [Exrate];
+}
+
+table Product {
+    market: Market;                 // 市场代码
+    symbol: string;                 // 合约代码
+    product_type: ProductType;      // 商品期货、股指期货、期权
+    product_sub_type: ProductSubType;   // 二级类型
+    short_name: string;
+    name: string;
+    status: Status;                 // 合约状态
+    lot_size: string;                // 每手股数
+    ps_code: string;                // 最小价格起跳
+    contract_size: ulong;           // 每点合约代表的价值
+    product_group: string;          // 合约类型，原油、恒指……
+    contract_month: string;         // yyyy-mm
+    expire_date: string;            // 到期日
+    last_trading_date: string;      // 最后交易日
+    ccy: Currency;
+    strike_price: string;           // 行权价
+    price_factor: ulong;            // 报价倍数，如果报价显示10023，实际价格是100.23，此处为100
+    price_denominator: ulong;       // 价格小数分母数，例如：123 64/256，此处为256
+    loan_percent: ushort;           // 融资比例
+    disallow_buy: ubyte;            // 不允许买入
+    disallow_sell: ubyte;           // 不允许卖出
+    disallow_shortsell: ubyte;      // 不允许沽空
+    extras: [Pair];
+	expire_notify_day: ulong;		// 提前多少天通知客户合约到期
+	im_ratio: string;		// 客户按金->基本保证金 乘数
+	mm_ratio: string;		// 客户按金->维持保证金 乘数
+	mmargin: string;		// 单张保证金
+	margin_mode: MarginMode;// 保证金模式：SPAN（计算）、NET（直取mmargin）
+}
+
+table Product_rsp{
+		res: Result;
+		product: Product;
+}
+
+table Query_products {
+    acc: Account;
+    page: Query_page;
+}
+
+table Query_products_rsp {
+    rsp: Result;
+    acc: Account;
+    page: Query_page;
+    items: [Product];
+    extras: [Pair];
+}
+
+
+table MarginScalingClassDetail {
+	time_interval: string;		// HH:mm:ss-HH:mm:ss
+	product_groups: [string];	// comma delimited, support multiple product_groups. e.g. CME:6A, CME:6J, HKF:HSI, SGX:(All) 
+	scaling_ratio: string;
+}
+
+table MarginScalingClass {
+	code: string;
+	details: [MarginScalingClassDetail];
+}
+
+table AccountInfo {
+    acc: Account;
+    markets: [Market];              // 该账户可交易的市场代码列表
+    eng_name: string;               // 英文名
+    cht_name: string;               // 繁体名
+    chs_name: string;               // 简体名
+    fax: string;                    // 传真号码
+    tel: string;                    // 电话号码
+    address: string;                // 住址
+    status: Status;                 // 用户状态，正常，冻结，销户
+    open_date: string;              // 开户日期
+    extra_buying_power: string;     // 额外购买力限额
+    bankids: [Bank];                // 该账户开通银期转账的银行列表
+    extras: [Pair];
+    credit_value: string;			// 信用额度
+	margin_scale_code: string;
+}
+
+table UserInfo {
+    res: Result;
+    items: [AccountInfo];
+}
+
+table Fund {
+    acc: Account;
+    ccy: Currency;          // 币种
+    balance: string;        // 余额(现金结余)
+    frozen: string;         // 冻结金额
+    usable: string;         // 可用金额
+    withdrawn: string;      // 可取金额
+    uncleared: string;      // 待确认金额
+    credit_value: string;   // 信用额度
+    margin_value: string;   // 按揭价值
+    bod_balance: string;    // 昨日余额(昨日现金结余)
+    today_cashio: string;   // 今日存取
+    unclear: string;        // 未兑资金
+    basic_margin: string;   // 基本保证金
+    extras: [Pair];
+    min_margin: string;    // 维持保证金
+}
+
+table Hold {
+    acc: Account;
+    market: Market;                 // 市场代码
+    symbol: string;                 // 合约代码
+    qty: string;                    // 持仓数量
+    margin_rato: string;            // 按股比例
+    uncleared: string;              // 待确认数量
+    today_buy_qty: string;          // 今买数量
+    today_sell_qty: string;         // 今卖数量
+    today_buy_amount: string;       // 今买金额
+    today_sell_amount: string;      // 今卖金额
+    avg_price: string;              // 持仓均价
+    cost_price: string;             // 持仓成本价
+    bod_qty: string;                // 昨日持仓数量
+    bod_cost_price: string;         // 昨日持仓成本价
+    bod_avg_price: string;          // 昨日持仓均价
+    long_position: string;          // 今日长仓
+    long_avg_price: string;         // 今日长仓均价
+    short_position: string;         // 今日短仓
+    short_avg_price: string;        // 今日短仓均价
+    extras: [Pair];
+    hold_avg_price: string; 				// 持仓均价（多仓计算的逻辑）
+}
+
+table PositionNotify {
+    acc: Account;
+    time: string;                   // 发生时间
+    serialno: string;               // 流水号
+    market: Market;                 // 市场代码
+    symbol: string;                 // 合约代码
+    qty: string;
+    extras: [Pair];
+}
+
+table Notify {
+    acc: Account;
+    msg: string;
+    operation: Action;          // 对该用户采取的动作，默认是通知，其次是断开、警告
+    extras: [Pair];
+}
+
+table Margin {
+    acc: Account;
+    ccy: Currency;
+    basic_margin: string;       // 基本保证金
+    min_magin: string;          // 维持保证金
+    extras: [Pair];
+}
+
+table Recovery {
+    acc: Account;
+    msgid_begin: uint;          // 重传消息的起始编号，包括自身
+    msgid_end: uint;            // 重传消息的结束编号，包括自身
+    extras: [Pair];
+}
+
+table VerifyCode_req{
+    acc: Account;
+    device_name: string;				//设备名称
+    device_code: string;				//设备代码
+    terminal: TerminalType;			//终端类型
+    ip: string;									//IP
+    extras: [Pair];
+}
+
+table VerifyCode_rsp {
+    res: Result;
+    timeout: string;				//超时时间
+    address: string;				//验证地址
+}
+
+table exrates_req{
+	acc: Account;
+	cur: Currency;	// 币种
+}
+
+// 查询委托的操作记录
+table Query_order_oprecord
+{
+    acc: Account;
+    page: Query_page;
+	entrust_no: string;             // 委托单号
+}
+table Order_operation_record
+{
+    direction: Entrust_mode;		// 买入、卖出、撤单、改单
+	price: string;
+	qty: string;
+	op_status: Op_status;			// 操作状态
+	input_channel: TerminalType;    // 操作终端类型
+	input_time: string;				// 操作时间
+	rej_msg: string;				// 拒绝理由
+	spec_cond: SpecialCond;         // 条件
+	remark: string;
+	extras: [Pair];
+}
+table Query_order_oprecord_rsp
+{
+    res: Result;
+    page: Query_page;
+    extras: [Pair];
+    items: [Order_operation_record];
+}
+table ACCOUNT_INFO
+{
+    api_type: string;
+    account: string;
+	password: string;
+    extras: [Pair];
+}
+root_type Account;

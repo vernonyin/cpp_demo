@@ -51,7 +51,7 @@ int main()
 	int a=1,b=5;
 	char* p=NULL;
 	getMemory(p);
-	strcpy(p,"hello");
+	py(p,"hello");
 	printf(p);
 	swap(a,b);
 	printf("a=%d,b=%d\n",a,b);

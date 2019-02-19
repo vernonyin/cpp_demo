@@ -12,72 +12,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77dcea9d-6859-4901-9ac5-03dc2f4c7452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataMember.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grammar/virtual.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/bit/bit.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/bit/coinChange.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/bsearch/binanrySearch.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/dp/dp.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/hash/hash.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/link/reverse.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/sort/sort.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/string/space.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/string/string.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/tree/kuohao.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/tree/tree.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/move.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/right_reference.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyString.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Only.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/base.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/code_generators.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/flatbuffers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/flatbuffers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/flatc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/flexbuffers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/grpc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/hash.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/idl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/minireflect.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/reflection.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/reflection_generated.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/registry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/stl_emulation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/flatbuffers/util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/mm.fbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/mm_generated.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fbs/mm_reader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hash_shm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/Only.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/class_construct.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/emplace_back.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/func_point.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/name_hide.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/null_point.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/permutation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/point.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/pstack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/unkown_point.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lang/weak_ptr.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/5example.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/array/maxProduct.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/array/twosum.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/bit/bitmap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/bit/xor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/bit/xor3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/dp/329longestIncreasingPath.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/queue/239maxSlidingWindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/queue/midNum.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/queue/midNum2_priority.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/sort/quick3.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/sort/quick_sort.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/string/all_range.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/string/reverse_string.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/string/strtoint.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/tree/101isSymmetric.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/map.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/printABC.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shm_statistics.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shm_statistics.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/singleton.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/time2.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/auto.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdCXX/a.out.dSYM/Contents/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.11.0/CompilerIdCXX/a.out.dSYM/Contents/Resources/DWARF/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/arr.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/array_func.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/class_conture.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/class_point.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/class_size.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/longest.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/median.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/mergeV2.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/object_book.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/operation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/var_addr.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/virtual_class.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/hello.dir/virtual_construct.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/hello" beforeDir="false" afterPath="$PROJECT_DIR$/build/hello" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/pow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/recursion/pow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/tree.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/twostack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/link/twostack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode/window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/dp/window.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reverse.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sds" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/bit/bit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/bit/bit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/bsearch/binanrySearch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/bsearch/binanrySearch.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/dp/dp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/dp/dp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/link/reverse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/link/reverse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/recursion/pow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/recursion/pow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/string/space.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/string/space.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/string/string.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/string/string.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/tree/tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/tree/tree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/merge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/merge.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shm_read.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shm_read.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shm_write.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shm_write.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtual_function.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/virtual_function.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,66 +92,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/array_func.cpp">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="176">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/string/string.cpp">
+        <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="153" column="16" lean-forward="true" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
-              <folding>
-                <element signature="e#79#98#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file:///usr/include/string.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/_ctype.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2132">
-              <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/bit/bit.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-              <folding>
-                <element signature="e#40#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/leetcode/string/space.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-              <folding>
-                <element signature="e#40#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="303">
+              <caret line="1654" column="25" selection-start-line="1654" selection-start-column="25" selection-end-line="1654" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -157,32 +112,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/bit/coinChange.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+            <state relative-caret-position="260">
+              <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leetcode/queue/midNum.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="685">
+              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="67" selection-end-column="9" />
               <folding>
-                <element signature="e#39#58#0" expanded="true" />
+                <element signature="e#0#2#0" />
+                <element signature="e#82#102#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atomic.cpp">
+        <entry file="file://$PROJECT_DIR$/leetcode/queue/midNum2_priority.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-71" />
+            <state relative-caret-position="251">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/atomic_inc.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/leetcode/sort/sort.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/sort/quick_sort.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+              <folding>
+                <element signature="e#40#59#0" expanded="true" />
+                <element signature="e#1095#1107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto.cpp">
+        <entry file="file://$PROJECT_DIR$/leetcode/sort/quick3.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="29">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#40#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quickSort.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31">
+              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/include/i386/limits.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -191,32 +199,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>replace</find>
-      <find>rever</find>
-      <find>ListNode</find>
-      <find>ReverseList</find>
-      <find>print</find>
-      <find>detectCycle</find>
-      <find>memory</find>
-      <find>hash</find>
-      <find>bfs</find>
-      <find>search(</find>
-      <find>priority</find>
-      <find>__stl</find>
-      <find>hashtable</find>
-      <find>prim</find>
-      <find>climbStairs</find>
-      <find>sqrt</find>
-      <find>coinChange</find>
-      <find>deleteDuplicates</find>
-      <find>dup</find>
-      <find>deleteDuplication</find>
-      <find>lengthOfLIS</find>
-      <find>hammingWeight</find>
+      <find>levelo</find>
+      <find>majorityElement</find>
+      <find>maxSubArray</find>
+      <find>maxProduct</find>
+      <find>MaxSubArray</find>
       <find>merge</find>
-      <find>reverse</find>
-      <find>reverseKGroup</find>
-      <find>CMAKE_CXX_COMPILER</find>
+      <find>isValidBST</find>
+      <find>generateParenthesis</find>
+      <find>mi*total</find>
+      <find>minimumTotal</find>
+      <find>hash_shm</find>
+      <find>getMode</find>
+      <find>getPos</find>
+      <find>memcpy</find>
+      <find>shm</find>
+      <find>赋值构造函数</find>
+      <find>only</find>
+      <find>Query_fund_rsp</find>
+      <find>userName</find>
+      <find>updateTrade</find>
+      <find>heap</find>
+      <find>mystr</find>
+      <find>minus</find>
+      <find>strc</find>
+      <find>shared_ptr</find>
+      <find>max</find>
+      <find>maxSlidingWindow</find>
+      <find>mystring</find>
+      <find>make_heap</find>
+      <find>quicks</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -228,45 +240,73 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/arr.cpp" />
-        <option value="$PROJECT_DIR$/link_intersection.cpp" />
-        <option value="$PROJECT_DIR$/tree.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/twostack.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/pow.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/window.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/virtual.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/bit.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/string.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/kuohao.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/tree.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/binanrySearch.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/map.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/hash.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/right_reference.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/sss" />
-        <option value="$PROJECT_DIR$/move.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/coinChange.cpp" />
-        <option value="$PROJECT_DIR$/reverse.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/dp.cpp" />
-        <option value="$PROJECT_DIR$/leetcode/reverse.cpp" />
         <option value="$PROJECT_DIR$/leetcode/sort.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/dataMember.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/string/string.cpp" />
         <option value="$PROJECT_DIR$/leetcode/string/space.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/recursion/pow.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/bsearch/binanrySearch.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/bit/bitmap.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/bit/bit.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/array/maxProduct.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/link/reverse.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/array/twosum.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/tree/tree.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/5example.cpp" />
+        <option value="$PROJECT_DIR$/merge.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/dp/dp.cpp" />
+        <option value="$PROJECT_DIR$/time2.cpp" />
+        <option value="$PROJECT_DIR$/singleton.cpp" />
+        <option value="$PROJECT_DIR$/.vscode/map.cpp" />
+        <option value="$PROJECT_DIR$/map.cpp" />
+        <option value="$PROJECT_DIR$/hash_shm.cpp" />
+        <option value="$PROJECT_DIR$/printABC.cpp" />
+        <option value="$PROJECT_DIR$/shm_write.cpp" />
+        <option value="$PROJECT_DIR$/shm_read.cpp" />
+        <option value="$PROJECT_DIR$/Only.cpp" />
+        <option value="$PROJECT_DIR$/mm_reader.h" />
+        <option value="$PROJECT_DIR$/fbs/mm_reader.h" />
+        <option value="$PROJECT_DIR$/shm_statistics.h" />
+        <option value="$PROJECT_DIR$/shm_statistics.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/string/reverse_string.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/string/strtoint.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/string/all_range.cpp" />
+        <option value="$PROJECT_DIR$/lang/class_construct.cpp" />
+        <option value="$PROJECT_DIR$/MyString.cpp" />
+        <option value="$PROJECT_DIR$/lang/name_hide.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/bit/xor.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/bit/xor3.cpp" />
+        <option value="$PROJECT_DIR$/lang/point.cpp" />
+        <option value="$PROJECT_DIR$/lang/func_point.cpp" />
+        <option value="$PROJECT_DIR$/lang/null_point.cpp" />
+        <option value="$PROJECT_DIR$/lang/unkown_point.cpp" />
+        <option value="$PROJECT_DIR$/lang/weak_ptr.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/dp/329longestIncreasingPath.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/queue/239maxSlidingWindow.cpp" />
+        <option value="$PROJECT_DIR$/lang/emplace_back.cpp" />
+        <option value="$PROJECT_DIR$/lang/permutation.cpp" />
+        <option value="$PROJECT_DIR$/lang/pstack.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/queue/midNum.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/queue/midNum2_priority.cpp" />
+        <option value="$PROJECT_DIR$/leetcode/sort/quick3.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/leetcode/sort/quick_sort.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="203" />
-    <option name="width" value="1440" />
-    <option name="height" value="801" />
+    <option name="x" value="1440" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -287,7 +327,11 @@
               <item name="test" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpp_demo" type="462c0819:PsiDirectoryNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="string" type="462c0819:PsiDirectoryNode" />
+              <item name="sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -299,17 +343,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/leetcode/dp" />
       <recent name="$PROJECT_DIR$/grammar" />
       <recent name="$PROJECT_DIR$/leetcode/link" />
       <recent name="$PROJECT_DIR$/leetcode/tree" />
-      <recent name="$PROJECT_DIR$/leetcode/string" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/leetcode/queue" />
+      <recent name="$PROJECT_DIR$/lang" />
+      <recent name="$PROJECT_DIR$/leetcode/string" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/leetcode" />
     </key>
   </component>
@@ -380,12 +428,30 @@
       <workItem from="1545893930103" duration="513000" />
       <workItem from="1546671603211" duration="52000" />
       <workItem from="1546684671626" duration="2615000" />
-      <workItem from="1546830781853" duration="1638000" />
+      <workItem from="1546830781853" duration="3719000" />
+      <workItem from="1547171239722" duration="8371000" />
+      <workItem from="1547471466095" duration="4858000" />
+      <workItem from="1547564299218" duration="1233000" />
+      <workItem from="1547608092135" duration="579000" />
+      <workItem from="1547710029810" duration="1573000" />
+      <workItem from="1547860010167" duration="32000" />
+      <workItem from="1547908032607" duration="37695000" />
+      <workItem from="1548308682703" duration="192000" />
+      <workItem from="1548310265635" duration="10484000" />
+      <workItem from="1548510096418" duration="2646000" />
+      <workItem from="1548681268904" duration="4497000" />
+      <workItem from="1548689914276" duration="799000" />
+      <workItem from="1548756852248" duration="1607000" />
+      <workItem from="1549683079753" duration="9389000" />
+      <workItem from="1549934692012" duration="57000" />
+      <workItem from="1550053136966" duration="1007000" />
+      <workItem from="1550129310950" duration="1000" />
+      <workItem from="1550129671116" duration="28013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107606000" />
+    <option name="totallyTimeSpent" value="222720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,47 +463,47 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+    <frame x="1438" y="23" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.42998028" visible="true" weight="0.19957082" />
-      <window_info id="Structure" order="1" sideWeight="0.5700197" side_tool="true" weight="0.22603719" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.578341" visible="true" weight="0.1400426" />
+      <window_info id="Structure" order="1" sideWeight="0.421659" side_tool="true" weight="0.1400426" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32863188" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26234132" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.31311706" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2609309" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.3416407" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32863188" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32771084" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.43723553" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32722145" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.4807892" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28290156" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.28490832" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.2157969" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.37175494" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.42998028" visible="true" weight="0.18240343" />
-      <window_info id="Structure" order="1" sideWeight="0.5700197" side_tool="true" weight="0.22603719" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.578341" visible="true" weight="0.1400426" />
+      <window_info id="Structure" order="1" sideWeight="0.421659" side_tool="true" weight="0.1400426" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32863188" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26234132" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.45980254" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2609309" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" visible="true" weight="0.42744657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32863188" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32771084" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.43723553" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32722145" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.48143983" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28290156" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.28490832" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.2157969" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.503937" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,13 +523,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/tree/tree.cpp</url>
-          <line>111</line>
+          <line>159</line>
           <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/leetcode/recursion/pow.cpp</url>
-          <line>33</line>
-          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/window.cpp</url>
@@ -477,57 +538,57 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>29</line>
+          <line>26</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>185</line>
+          <line>182</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>62</line>
+          <line>59</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>57</line>
+          <line>54</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>221</line>
+          <line>218</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>213</line>
+          <line>210</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>102</line>
+          <line>99</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>209</line>
+          <line>206</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>71</line>
+          <line>68</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/bit/bit.cpp</url>
-          <line>54</line>
+          <line>65</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/string/string.cpp</url>
-          <line>197</line>
+          <line>194</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -552,7 +613,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>288</line>
+          <line>318</line>
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -562,7 +623,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>287</line>
+          <line>317</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -587,72 +648,72 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>130</line>
+          <line>149</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>143</line>
+          <line>162</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>153</line>
+          <line>172</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>169</line>
+          <line>188</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>162</line>
+          <line>181</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>180</line>
+          <line>199</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/link/reverse.cpp</url>
-          <line>562</line>
+          <line>564</line>
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>202</line>
+          <line>221</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/link/reverse.cpp</url>
-          <line>608</line>
+          <line>610</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/link/reverse.cpp</url>
-          <line>633</line>
+          <line>635</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/link/reverse.cpp</url>
-          <line>587</line>
+          <line>589</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/link/reverse.cpp</url>
-          <line>599</line>
+          <line>601</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>227</line>
+          <line>246</line>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
-          <line>240</line>
+          <line>259</line>
           <option name="timeStamp" value="111" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -665,11 +726,98 @@
           <line>16</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/bit/bit.cpp</url>
+          <line>44</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/array/twosum.cpp</url>
+          <line>47</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/array/twosum.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/array/twosum.cpp</url>
+          <line>23</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/array/twosum.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/merge.cpp</url>
+          <line>74</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
+          <line>100</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/dp/dp.cpp</url>
+          <line>109</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/shm_statistics.cpp</url>
+          <line>174</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/shm_statistics.cpp</url>
+          <line>153</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/string/reverse_string.cpp</url>
+          <line>18</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/queue/239maxSlidingWindow.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/queue/239maxSlidingWindow.cpp</url>
+          <line>31</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/sort/quick_sort.cpp</url>
+          <line>59</line>
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>arr+1</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>arr</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>errno</expression-string>
+        <language-id>ObjectiveC</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>nums[i]</expression-string>
         <language-id>ObjectiveC</language-id>
@@ -698,348 +846,391 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__config">
+    <entry file="file://$PROJECT_DIR$/lang/name_hide.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="679" column="14" selection-start-line="679" selection-start-column="14" selection-end-line="679" selection-end-column="14" />
+        <state>
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tree.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/bit/xor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="-9">
+          <caret line="15" column="5" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/stdlib.h">
+    <entry file="file://$PROJECT_DIR$/leetcode/bit/xor3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="25" column="13" selection-end-line="40" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functional.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/func_point.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/point.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+          <caret line="32" selection-start-line="32" selection-end-line="33" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/stdlib.h">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/ios">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2526" />
-      </provider>
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/deque">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42288">
-          <caret line="1762" selection-start-line="1762" selection-end-line="1762" />
+        <state relative-caret-position="124">
+          <caret line="753" column="28" selection-start-line="753" selection-start-column="28" selection-end-line="753" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/set">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/ostream">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9336">
-          <caret line="389" column="15" selection-start-line="389" selection-start-column="15" selection-end-line="389" selection-end-column="15" />
+        <state relative-caret-position="-18">
+          <caret line="557" column="40" selection-start-line="557" selection-start-column="40" selection-end-line="557" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/memory">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6480">
-          <caret line="270" column="13" selection-start-line="270" selection-start-column="13" selection-end-line="270" selection-end-column="13" />
+        <state relative-caret-position="-489" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/string/reverse_string.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link_intersection.cpp">
+    <entry file="file://$PROJECT_DIR$/share_ptr.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/cmath">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/functional">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/include/stdio.h">
+    <entry file="file://$PROJECT_DIR$/lang/null_point.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="171" column="12" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="12" />
+        <state relative-caret-position="550">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="27" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/virtual_class.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/include/boost/multiprecision/detail/float_string_cvt.hpp">
+    <entry file="file://$PROJECT_DIR$/lang/unkown_point.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5208">
-          <caret line="217" column="15" selection-start-line="217" selection-start-column="15" selection-end-line="217" selection-end-column="15" />
+        <state relative-caret-position="594">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/i386/limits.h">
+    <entry file="file://$PROJECT_DIR$/virtual_function.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="1540">
+          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/unordered_map">
+    <entry file="file://$PROJECT_DIR$/lang/weak_ptr.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="1515" column="20" selection-start-line="1515" selection-start-column="20" selection-end-line="1515" selection-end-column="20" />
+        <state relative-caret-position="483">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__hash_table">
+    <entry file="file://$PROJECT_DIR$/printABC.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="2151" column="43" selection-start-line="2151" selection-start-column="43" selection-end-line="2151" selection-end-column="43" />
+        <state relative-caret-position="497">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/type_traits">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__mutex_base">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="2209" selection-start-line="2209" selection-end-line="2209" />
+        <state relative-caret-position="8162">
+          <caret line="371" column="20" selection-start-line="371" selection-start-column="20" selection-end-line="371" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/move.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/dp/dp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="-2678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/tree/kuohao.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/tree/tree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/5example.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1456" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/dp/329longestIncreasingPath.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="42" column="15" lean-forward="true" selection-end-line="140" selection-end-column="1" />
           <folding>
             <element signature="e#39#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reverse.cpp" />
-    <entry file="file://$PROJECT_DIR$/pthread_simple.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/memory">
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/deque">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40056">
-          <caret line="1669" selection-start-line="1669" selection-end-line="1669" />
+        <state relative-caret-position="39182">
+          <caret line="1781" selection-start-line="1781" selection-end-line="1781" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103512">
-          <caret line="4313" selection-start-line="4313" selection-end-line="4313" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataMember.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/sss" />
     <entry file="file://$PROJECT_DIR$/leetcode/link/reverse.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <marker date="1544351538669" expanded="true" signature="5179:5643" ph="..." />
-          </folding>
+        <state relative-caret-position="1012">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/bsearch/binanrySearch.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/leetcode/tree/101isSymmetric.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/dp/dp.cpp">
+    <entry file="file://$PROJECT_DIR$/leetcode/queue/239maxSlidingWindow.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="126" column="12" selection-start-line="126" selection-start-column="12" selection-end-line="126" selection-end-column="12" />
+        <state relative-caret-position="36">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="e#79#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/hash/hash.cpp">
+    <entry file="file://$PROJECT_DIR$/lang/func_point.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="368">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/map.cpp" />
-    <entry file="file://$PROJECT_DIR$/leetcode/tree/kuohao.cpp">
+    <entry file="file://$PROJECT_DIR$/lang/class_construct.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="44" column="11" lean-forward="true" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+        <state relative-caret-position="396">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/__string">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/emplace_back.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
-            <element signature="e#41#60#0" expanded="true" />
+            <element signature="e#42#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/permutation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1251">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/pstack.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/array/maxProduct.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/string/string.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyString.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Only.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-942" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/bit/bit.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/bit/bitmap.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/i386/limits.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/bit/coinChange.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/vector">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="1654" column="25" selection-start-line="1654" selection-start-column="25" selection-end-line="1654" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/queue/midNum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="67" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#2#0" />
+            <element signature="e#82#102#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="2152" column="2" lean-forward="true" selection-start-line="2152" selection-start-column="2" selection-end-line="2152" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/queue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2249">
+          <caret line="389" column="30" selection-start-line="389" selection-start-column="30" selection-end-line="389" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/queue/midNum2_priority.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/sort/sort.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="220">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quickSort.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/algorithm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="4027" column="29" lean-forward="true" selection-start-line="4027" selection-start-column="29" selection-end-line="4027" selection-end-column="29" />
+          <folding>
+            <element signature="e#172732#172917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/sort/quick3.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#40#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/sort/quick_sort.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
           <folding>
             <element signature="e#40#59#0" expanded="true" />
+            <element signature="e#1095#1107#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/tree/tree.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-          <folding>
-            <element signature="e#2#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/link/twostack.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/virtual.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/dp/window.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/recursion/pow.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#41#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/right_reference.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/arr.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/bit/coinChange.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/array_func.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atomic_inc.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/bit/bit.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="36" column="30" lean-forward="true" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/string/space.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/_ctype.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2132">
-          <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/string/string.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="153" column="16" lean-forward="true" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
-          <folding>
-            <element signature="e#79#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
         </state>
       </provider>
     </entry>

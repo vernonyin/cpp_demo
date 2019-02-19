@@ -33,16 +33,27 @@ public:
     }
 
 
-    // 判断2的n次方 https://leetcode.com/problems/power-of-two
+    // 判的N次方 https://leetcode.com/problems/power-of-two
     bool isPowerOfTwo(int n) {
         if(n<=0) return false;
         return (n&(n-1)) == 0;
     }
+
+    int HowManyBit(int n){
+        int num = 0;
+        while(n){
+            n &=n-1;
+            num++;
+        }
+        return  num;
+    }
+
 };
 
 int main(){
     Solution s;
-    printf("5 bit =%d \n",s.hammingWeight(5));
+    printf("1 bit=%d\n",s.HowManyBit(1));
+    printf("5 bit =%d \n",s.HowManyBit(5));
     printf("5 bit =%d \n",s.hammingWeightBit(5));
     printf("1024 bit =%d \n",s.hammingWeight(1024));
     printf("1024 bit =%d \n",s.hammingWeightBit(1024));

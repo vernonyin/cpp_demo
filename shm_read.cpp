@@ -14,7 +14,7 @@ struct shared_use_st
 };
 
 
-int main_sh()
+int main()
 {
 	int running = 1;//程序是否继续运行的标志
 	void *shm = NULL;//分配的共享内存的原始首地址

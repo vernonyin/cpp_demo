@@ -45,7 +45,9 @@ public:
     ListNode *pre = NULL;
     ListNode *cur = pHead;
     while (cur) {
+      // tmp 2 3 4
       ListNode *tmp = cur->next;
+      // 1->0
       cur->next = pre;
 
       pre = cur;

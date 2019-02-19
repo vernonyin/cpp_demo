@@ -98,6 +98,25 @@ public:
   }
 
   int minimumTotal(vector<vector<int> > &triangle) {
+      int depth = triangle.size();
+      vector<vector<int > > dp;
+      for (int i=0;i<triangle.size();i++){
+          vector<int> tmp;
+          for(int j=0;j<triangle[i].size();j++){
+              tmp.push_back(0);
+          }
+          dp.push_back(tmp);
+      }
+      for(int i=0;i<triangle[depth-1].size();i++){
+          dp[depth-1][i] = triangle[depth-1][i];
+      }
+      for(int i=depth-2;i>=0;i--){
+          for (int j=0;j<triangle[i].size();j++){
+              dp[i][j] = min(dp[i+1][j],dp[i+1][j+1])+triangle[i][j];
+          }
+      }
+
+      return dp[0][0];
 
 //    vector<int> mini = triangle[triangle.size()-1];
 //    for ( int i = triangle.size() - 2; i>= 0 ; --i )
@@ -260,6 +279,17 @@ public:
   };
 
 int main() {
+    Solution s;
+    vector<vector<int > > dp;
+    for (int i=0;i<2;i++){
+        vector<int> tmp;
+        for(int j=0;j<2;j++){
+            tmp.push_back(i);
+        }
+        dp.push_back(tmp);
+    }
+
+    s.minimumTotal(dp);
 
 
   int a[8][8] = {
@@ -272,7 +302,7 @@ int main() {
           {0, 1, 0, 0, 0, 1, 0, 0},
           {0, 0, 0, 0, 0, 0, 0, 0},
   };
-  Solution s;
+
   vector<int> vv={-2,1,-3,4,-1,2,1,-5,4};
   int num000 = s.maxSubArray(vv);
   //[7,1,5,3,6,4]

@@ -18,6 +18,11 @@ struct TreeNode {
 
 class Solution {
 public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+      vector<int> dep;
+      while(root)
+    }
+
   //树重建
   struct TreeNode *reConstructBinaryTree(vector<int> pre, vector<int> in) {
 
@@ -59,6 +64,7 @@ public:
   bool validate(TreeNode *node, TreeNode *&prev) {
     if (node == NULL) return true;
     if (!validate(node->left, prev)) return false;
+
     if (prev != NULL && prev->val >= node->val) return false;
     prev = node;
     return validate(node->right, prev);
@@ -99,6 +105,48 @@ public:
 
     return min(leftMin,rightMin)+1;
   }
+
+
+    bool isValidBST(TreeNode* root) {
+      if(!root){
+        return true;
+      }
+      vector<int> v;
+      inOrder(root,v);
+      for(int i=0;i<v.size()-1;i++){
+        if(v[i] >= v[i+1]){
+          return false;
+        }
+      }
+      return true;
+    }
+
+    void inOrder(TreeNode* root,vector<int>& vec){
+      if (!root){
+        return ;
+      }
+      inOrder(root->left,vec);
+      vec.push_back(root->val);
+      inOrder(root->right,vec);
+    }
+
+    bool isValidBST(TreeNode* root) {
+      if(!root || (!root->left && !root->right)){
+        return true;
+      }
+      return isValid(root,NULL,NULL);
+    }
+
+    bool isValid(TreeNode* root,TreeNode* min,TreeNode*  max){
+      if (!root) {
+        return true;
+      }
+      if ((min != NULL && root->val <= min->val) || (max != NULL && root->val >= max->val)){
+        return false;
+      }
+      return isValid(root->left,min,root) &&
+             isValid(root->right,root,max);
+    }
 };
 
 int main() {

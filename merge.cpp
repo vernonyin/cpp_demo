@@ -9,6 +9,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <cmath>
+#include <vector>
 using namespace std;
 
 struct ListNode {
@@ -65,6 +66,44 @@ public:
 		}
 		return cur;
 	}
+
+	ListNode* Merge2(ListNode* pHead1, ListNode* pHead2)
+	{
+		ListNode tmp(0);
+		ListNode* res=&tmp;
+		while(pHead1 && pHead2){
+			if (pHead1->val < pHead2->val){
+				res->next = pHead1;
+				pHead1 = pHead1->next;
+			}else{
+				res->next = pHead2;
+				pHead2 = pHead2->next;
+			}
+			res = res->next;
+		}
+		if(pHead1){
+			res->next = pHead1;
+		}
+		if(pHead2){
+			res->next = pHead2;
+		}
+		return tmp.next;
+	}
+
+	int minimumTotal(vector<vector<int>>& triangle) {
+		int depth = triangle.size();
+		vector<vector<int > > dp[100][100];
+		for(int i=0;i<triangle[depth-1].size();i++){
+			dp[depth-1][i] = triangle[depth-1][i];
+		}
+		for(int i=depth-1;i>=0;i--){
+			for (int j=0;j<triangle[i].size();j++){
+				dp[i][j] = min(dp[i+1][j],dp[i+1][j+1])+triangle[i][j];
+			}
+		}
+
+		return dp[0][0];
+	}
 };
 
 /*
@@ -107,7 +146,7 @@ int main() {
 //	} while (cur = cur->next);
 
 //	cur = s.ReverseList(head);
-	cur = s.Merge(cur, cur2);
+	cur = s.Merge2(cur, cur2);
 	do {
 		printf("before list val=%d\n", cur->val);
 	} while (cur = cur->next);
