@@ -33,7 +33,7 @@ void quicksortMy1(int arr[], int l, int r) {
     }
     int left = l;
     int right = r;
-    int pivot = Median3(arr, l, r);
+    int pivot = arr[l];//Median3(arr, l, r);
     while (left < right) {
         while (left < right && arr[right] >= pivot) {
             right--;
@@ -53,15 +53,68 @@ void quicksortMy1(int arr[], int l, int r) {
     }
 }
 
-template<typename T>
-void func(T t) {
-    cout << t << endl;
+#include <iostream>
+using namespace std;
+
+void _quicksort(int arr[],int l,int r){
+    if(l >= r) return ;
+
+    int left = l;
+    int right = r;
+    int pivot = arr[l];
+    while(left < right){
+        while(left < right && arr[right] >= pivot){
+            right--;
+        }
+        arr[left] = arr[right];
+        while(left < right && arr[left] <= pivot){
+            left++;
+        }
+        arr[right] = arr[left];
+    }
+    arr[left] = pivot;
+    if(l < left-1){
+        _quicksort(arr,l,left-1);
+    }
+    if(left+1 < r){
+        _quicksort(arr,left+1,r);
+    }
+}
+
+void quicksort666(int arr[],int length){
+    _quicksort(arr,0,length-1);
+}
+//int main() {
+//    cout << "Hello World!" << endl;
+//}
+
+void quicksort(int arr[],int l,int r){
+    if(l >= r) return ;
+    int left = l;
+    int right = r;
+    int pivot = arr[l];
+    while(left < right){
+        while(left < right && arr[right] >= pivot){
+            right--;
+        }
+        arr[left] = arr[right];
+        while(left < right && pivot >= arr[left]){
+            left++;
+        }
+        arr[right] = arr[left];
+    }
+    arr[left] = pivot;
+    if(l < left-1){
+        quicksort(arr,l,left-1);
+    }
+    if(left+1 < r){
+        quicksort(arr,left+1,r);
+    }
 }
 
 int main() {
     int arr[] = {4, 2, 6, 3, 5, 6, 4, 67, 3, 2};
-    quicksortMy1(arr, 0, (sizeof(arr) / sizeof(int)) - 1);
-    func("hello world");
+    quicksort666(arr, (sizeof(arr) / sizeof(int)) );
 
     for (auto i : arr) {
         cout << i << " ";

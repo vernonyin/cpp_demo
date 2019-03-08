@@ -63,17 +63,47 @@ int replace(char str[],int len){
     }
     return len+space*2;
 }
-int main() {
-    //构造方法1
-//    char s[100]="ab c";
-    //直接malloc 需要手动free 需要异常判断
-    char* s = (char *)malloc(100);
-    if (s == NULL) {
 
+void replaceSpaceNewcoder(char *str,int length) {
+    int space_num = 0;
+    int len = length;
+    while(length --){
+        if(str[length] == ' '){
+            space_num ++;
+        }
     }
-    strcpy(s,"ab c");
-    int t = replace2(s,strlen(s));
-    printf("new str:%s\n",s);
-    free(s);
+    int new_len = len+space_num*2-1;
+    char* new_str = (char *) malloc(new_len);
+    while(len --){
+        if(str[len] == ' '){
+            new_str[new_len--]='0';
+            new_str[new_len--]='2';
+            new_str[new_len--]='%';
+        }else{
+            new_str[new_len--]=str[len];
+        }
+    }
+    str = new_str;
+
+    return ;
+}
+
+int main() {
+
+    char* s = "H ";
+    replaceSpaceNewcoder(s,strlen(s));
+
+//
+//    //构造方法1
+////    char s[100]="ab c";
+//    //直接malloc 需要手动free 需要异常判断
+//    char* s = (char *)malloc(100);
+//    if (s == NULL) {
+//
+//    }
+//    strcpy(s,"ab c");
+//    int t = replace2(s,strlen(s));
+//    printf("new str:%s\n",s);
+//    free(s);
     return 0;
 }

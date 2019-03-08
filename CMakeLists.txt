@@ -6,7 +6,12 @@ message( WARNING "input...." ${file})
 #C++ 11支持
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x ")
 include_directories(./fbs)
+include_directories(./liang/)
+#add_executable(hello liang/main.cpp liang/FilterDirtyWord.cpp)
+
 add_executable(hello leetcode/sort/quick_sort.cpp)
+
+
 #leetcode/twostack.cpp
 #添加链接库
 TARGET_LINK_LIBRARIES(hello pthread) 

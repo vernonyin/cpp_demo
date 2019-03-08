@@ -81,25 +81,25 @@ public:
 
 
 
-    //1-2-3-4
-    ListNode tmp(0);
-    tmp.next = head;
-    ListNode *pre = &tmp;
-    ListNode *cur = head;
-    //注意终止条件
-    while (cur && cur->next) {
-      // pre0 2 3 4
-      pre->next = cur->next;
-      //pre 2-3-4
-      pre = pre->next;
-      //1-3-4
-      cur->next = pre->next;
-      pre->next = cur;
-
-      pre = cur;
-      cur = cur->next;
-    }
-    return tmp.next;
+//    //1-2-3-4
+//    ListNode tmp(0);
+//    tmp.next = head;
+//    ListNode *pre = &tmp;
+//    ListNode *cur = head;
+//    //注意终止条件
+//    while (cur && cur->next) {
+//      // pre0 2 3 4
+//      pre->next = cur->next;
+//      //pre 2-3-4
+//      pre = pre->next;
+//      //1-3-4
+//      cur->next = pre->next;
+//      pre->next = cur;
+//
+//      pre = cur;
+//      cur = cur->next;
+//    }
+//    return tmp.next;
 
 
   }
@@ -642,6 +642,50 @@ public:
 //    return pHead;
   }
 
+    ListNode* removeElements(ListNode* head, int val) {
+      if(head == NULL ){
+        return NULL;
+      }
+      if(head->next == NULL){
+        if(head->val == val){
+          return NULL;
+        }else{
+          return head;
+        }
+      }
+
+      ListNode tmp(0);
+      tmp.next = head;
+      ListNode* pre = head;
+      ListNode* cur = head->next;
+      while(cur){
+        if(cur->val == val){
+          cur = cur->next;
+          continue;
+        }
+        pre->next = cur;
+        pre = pre->next;
+        cur = cur->next;
+      }
+      return tmp.next;
+    }
+
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode dummy(0);
+        ListNode* pre = &dummy;
+        ListNode* cur = head;
+        while(cur && cur->next){
+            if(cur->val == cur->next->val){
+                cur = cur->next->next;
+            }else{
+                pre->next = cur;
+                pre = pre->next;
+                cur = cur->next;
+            }
+        }
+        pre->next = NULL;
+        return dummy.next;
+    }
 
 };
 
@@ -690,20 +734,21 @@ enum {
   rotateRight,
   deleteDuplication,
   Merge,
+    removeElements,
 };
 
 int main() {
   Solution s;
   ListNode *link = New(3);
 
-  int arr[] = {1,3,5};
-  ListNode *linkArr = NewArray(arr, 3);
+  int arr[] = {1,2,3,3,4,4,5};
+  ListNode *linkArr = NewArray(arr, 7);
 
 
   int arr2[] = {2,4,6};
   ListNode *linkArr2 = NewArray(arr, 3);
 
-  int i = Merge;
+  int i = removeElements;
   int test = 0 + i;
 
   if (test == Merge) {
@@ -743,6 +788,8 @@ int main() {
     ListNode *kNode = s.rotateRight2(link, 4);
     printf("======rotateRight=======\n");
     Print(kNode);
+  }else if (test == removeElements){
+      s.deleteDuplicates(linkArr);
   }
 
   return 0;
