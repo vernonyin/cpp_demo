@@ -45,18 +45,53 @@ public:
   //dp方程：dp[i]=min(dp[i-coins[j])+1
   //时间复杂度：n*m
   int coinChange(vector<int> &coins, int amount) {
-    int Max = amount + 1;
-    vector<int> dp(amount + 1, Max);
+
+    vector<int> dp(amount+1,amount+1);
     dp[0] = 0;
-    for (int i = 0; i <= amount; i++) {
-      for (int j = 0; j < coins.size(); j++) {
-        if (coins[j] <= i) {
-          dp[i] = min(dp[i], dp[i - coins[j]] + 1);
+
+    for(int i = 0; i < amount; i++){
+      for(int j=0; j < coins.size(); j++){
+        if(coins[j] <= i){
+          dp[i] = min(dp[i-coins[j]]+1,dp[i]);
         }
       }
     }
+
     return dp[amount] > amount ? -1 : dp[amount];
+
   }
+
+  //25
+    int waysToChange(int n) {
+      return _waysToChange(4,n);
+    }
+
+    int _waysToChange(int x,int y){
+      vector<int> vc={1,5,10,25};
+      if(--x >0 ){
+        int res = 0 ;
+        for(int i = 0 ;i < y/vc[x] ; i++){
+          res += _waysToChange(i,y-i*vc[x]);
+        }
+        return res;
+      }else{
+        return 1;
+      }
+  }
+
+
+    int coinChange2021(vector<int>& coins, int amount) {
+      vector<int> dp(amount+1,amount+1);
+      dp[0] = 0;
+      for(int i = 0; i <= amount; i ++){
+        for(int j = 0; j < coins.size(); j++){
+          if(i >= coins[j])
+              dp[i] = min(dp[i],dp[i-coins[j]]+1);
+        }
+      }
+
+      return dp[amount] == 0 ? -1 : dp[amount];
+    }
 
 };
 
@@ -77,9 +112,14 @@ int myatoi(const char *str) {
 }
 
 int main() {
-  printf("atoi=%f",myatoi("3.14"));
+//  printf("atoi=%f",myatoi("3.14"));
   Solution s;
-  vector<int> v{1, 2, 5};
-  int num = s.coinChange(v, 11);
+//  vector<int> v{1, 2, 5};
+  vector<int> v{2};
+//  int num = s.coinChange(v, 11);
+
+//  int num = s.coinChange2021(v,11);
+  int num = s.coinChange2021(v,3);
   printf("num=%d\n",num);
+
 }

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/yin/Documents/cpp_demo/leetcode/string/string.cpp
+iostream
+-
+string.h
+-
+cstring
+-
+stdlib.h
+-
+cmath
+-
+vector
+-
+deque
+-
+set
+-
+

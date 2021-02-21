@@ -166,6 +166,33 @@ public:
         }
         return true;
     }
+
+    string reverseWords(string s) {
+      string res;
+      int start = s.size()-1;
+      int end = start;
+      while(start >0 && end>0){
+        if(s[end] == ' '){
+          --end;
+          continue;
+        }
+        start = end;
+
+        while(start > 0 ){
+          if(s[start] == ' '){
+            break;
+          }else{
+            --start;
+          }
+        }
+
+        res += s.substr(start+1,end-start);
+        res += " ";
+        end = --start;
+      }
+
+      return res.substr(0,res.size()-1);
+    }
 };
 
 void getMemory(char **p) {
@@ -188,19 +215,23 @@ void Test() {
 
 int main() {
     Solution s;
-    char stri[] = "12353453";
-
-    printf("checkPalindrome A man, a plan, a canal: Panama %d\n", s.checkPalindrome("A man, a plan, a canal: Panama"));
-    printf("checkPalindrome race a car %d\n", s.checkPalindrome("race a car"));
-    printf("checkPalindrome OP %d\n", s.checkPalindrome("OP"));
-    printf("checkPalindrome abc %d\n", s.checkPalindrome("abc"));
-    int ret = s.StrToInt2(stri);
-    printf("%s=%d", stri, ret);
-    char str[] = "memmove can be very useful......";
-
-    s.LeftRotateString(str, strlen(str), 4);
-    puts(str);
+    string str = "a good   example";
+    //"a good   example"
+    s.reverseWords(str);
     return 0;
+//    char stri[] = "12353453";
+//
+//    printf("checkPalindrome A man, a plan, a canal: Panama %d\n", s.checkPalindrome("A man, a plan, a canal: Panama"));
+//    printf("checkPalindrome race a car %d\n", s.checkPalindrome("race a car"));
+//    printf("checkPalindrome OP %d\n", s.checkPalindrome("OP"));
+//    printf("checkPalindrome abc %d\n", s.checkPalindrome("abc"));
+//    int ret = s.StrToInt2(stri);
+//    printf("%s=%d", stri, ret);
+//    char str[] = "memmove can be very useful......";
+//
+//    s.LeftRotateString(str, strlen(str), 4);
+//    puts(str);
+//    return 0;
 //    size_t t = s.strlen(str);
 //    puts(str);
 //    putchar(t);
@@ -220,7 +251,7 @@ int main() {
 //    s.replaceBlack(str);
 
 //    Test();
-    return 0;
+//    return 0;
 //        char *str = NULL;
 //        getMemory(&str);
 //        strcpy(str,"hello wrold");   //2

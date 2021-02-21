@@ -28,23 +28,23 @@ public:
 
     //考虑大整数 2147395599
     int mySqrt(int x) {
-        if (x <= 1) return 1;
-        int a = 0, b = x;
-        while (a <= b) {
-            int mid = a + (b - a) / 2;
-            if (x / mid == mid) {
-                return mid;
-            } else if (x / mid < mid) {
-                b = mid - 1;
-            } else {
-                a = mid + 1;
-            }
-            //不需要了
+      if (x <= 1) return x;
+      int a = 0, b = x;
+      while (a <= b) {
+        int mid = a + (b - a) / 2;
+        if (x / mid == mid) {
+          return mid;
+        } else if (x / mid < mid) {
+          b = mid - 1;
+        } else {
+          a = mid + 1;
+        }
+        //不需要了
 //      if (b - a == 1) {
 //        return a;
 //      }
-        }
-        return a;
+      }
+      return b;
     }
 
     double mySqrt2(int x) {
@@ -63,12 +63,29 @@ public:
         }
         return min;
     }
+
+    int mySqrt3(int x) {
+      int l = 0;
+      int r = x;
+      while(l <= r){
+        int t = (l+r)/2;
+        int x2 = t*t;
+        if(x2 > x){
+          r = t-1;
+        }else if (x2 < x){
+          l = t+1;
+        }else{
+          return t;
+        }
+      }
+      return r;
+    }
 };
 
 int main() {
     Solution s;
     vector<int> v{-1, 0, 5};
     printf("%d\n", s.search(v, -1));
-    printf("64=%f\n", s.mySqrt2(2));
+    printf("64=%d\n", s.mySqrt(8));
     return 0;
 }

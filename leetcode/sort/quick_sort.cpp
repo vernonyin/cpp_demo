@@ -113,7 +113,7 @@ void quicksort(int arr[],int l,int r){
 }
 
 int main() {
-    int arr[] = {4, 2, 6, 3, 5, 6, 4, 67, 3, 2};
+    int arr[] = {4, -2,2, 6, 3,99, 5, 6, 4, 67, 3, 2};
     quicksort666(arr, (sizeof(arr) / sizeof(int)) );
 
     for (auto i : arr) {

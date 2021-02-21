@@ -276,11 +276,29 @@ public:
     return res;
   }
 
+    int lengthOfLIS2021(vector<int>& nums) {
+      int sz = nums.size();
+      vector<int> dp(nums.size(),0);
+
+      for(int i = 0; i < nums.size(); i++){
+        int dpi = 1;
+        for(int j = 0 ; j < i ;j++){
+          if(nums[i] > nums[j])
+            dpi = max(dpi,dp[j]+1);
+        }
+        dp[i] = dpi;
+      }
+      return dp[sz-1];
+    }
+
   };
 
 int main() {
     Solution s;
-    vector<vector<int > > dp;
+    vector<int> v= {1,3,6,7,9,4,10,5,6};
+    s.lengthOfLIS2021(v);
+#if 0
+vector<vector<int > > dp;
     for (int i=0;i<2;i++){
         vector<int> tmp;
         for(int j=0;j<2;j++){
@@ -317,5 +335,6 @@ int main() {
   printf("num2=%d\n", num2);
   int num = s.dp2(a, 0, 0);
   printf("num=%d\n", num);
+#endif
   return 0;
 }

@@ -270,18 +270,31 @@ public:
   }
 
   //倒数第k个元素:保留pk和cur两个指针，同时移动
-  ListNode *FindKthToTail(ListNode *head, int k) {
-    ListNode *pk = head;
-    ListNode *cur = head;
-    int i = 0;
-    while (cur) {
-      if (++i >= k) {
-        pk = pk->next;
+  ListNode *FindKthToTail(ListNode *pListHead, int k) {
+    ListNode * kth = pListHead;
+    int i=1;
+    while(pListHead){
+      if(i++ > k){
+        kth = kth->next;
       }
-
-      cur = cur->next;
+      pListHead = pListHead->next;
+      i++;
     }
-    return pk;
+    return i <= k ? nullptr : kth;
+
+
+
+//    ListNode *pk = head;
+//    ListNode *cur = head;
+//    int i = 0;
+//    while (cur) {
+//      if (++i >= k) {
+//        pk = pk->next;
+//      }
+//
+//      cur = cur->next;
+//    }
+//    return pk;
 
 
 
@@ -562,28 +575,27 @@ public:
   }
 
   ListNode *deleteDuplicates1208(ListNode *head) {
-    if (!head || !head->next) return head;
-    ListNode *cur = head->next;
-    ListNode *pre = head;
-    while (cur) {
-      if (pre->val == cur->val) {
-        cur = cur->next;
-      } else {
-        pre->next = cur;
-        pre = pre->next;
-        cur = cur->next;
+    // 1->2->3->3->4->4
+      if(!head || !head->next){
+          return head;
       }
-    }
-    pre->next = NULL;
-    return head;
-//    ListNode* cur = head;
-//    while(cur) {
-//      while(cur->next && cur->val == cur->next->val) {
-//        cur->next = cur->next->next;
-//      }
-//      cur = cur->next;
-//    }
-//    return head;
+      ListNode dummy(0);
+      ListNode* res=&dummy;
+      ListNode* cur = head;
+      while(cur && cur->next){
+          if(cur->val == cur->next->val){
+              cur = cur->next;
+              while(cur->next && cur->val == cur->next->val){
+                  cur = cur->next;
+              }
+          }else{
+              res->next = cur;
+              res = res->next;
+          }
+          cur = cur->next;
+      }
+      res->next = cur;
+      return dummy.next;
   }
 
   ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
@@ -734,12 +746,12 @@ enum {
   rotateRight,
   deleteDuplication,
   Merge,
-    removeElements,
+  removeElements,
 };
 
 int main() {
   Solution s;
-  ListNode *link = New(3);
+  ListNode *link = New(5);
 
   int arr[] = {1,2,3,3,4,4,5};
   ListNode *linkArr = NewArray(arr, 7);
@@ -748,7 +760,7 @@ int main() {
   int arr2[] = {2,4,6};
   ListNode *linkArr2 = NewArray(arr, 3);
 
-  int i = removeElements;
+  int i = FindKthToTail;
   int test = 0 + i;
 
   if (test == Merge) {
@@ -781,7 +793,7 @@ int main() {
     printf("======getIntersectionNode=======\n");
     Print(link);
   } else if (test == FindKthToTail) {
-    ListNode *kNode = s.FindKthToTail(link, 5);
+    ListNode *kNode = s.FindKthToTail(link, 1);
     printf("======FindKthToTail=======\n");
     Print(kNode);
   } else if (test == rotateRight) {
